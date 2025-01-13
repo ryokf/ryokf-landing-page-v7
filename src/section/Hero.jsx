@@ -18,10 +18,10 @@ const Hero = () => {
             </div>
             <div className="w-full h-full absolute inset-0">
                 <Canvas className="w-full h-full">
-                    <Suspense fallback={<CanvasLoader />}></Suspense>
-                    <PerspectiveCamera makeDefault position={[0, 0, 30]}>
+                    <Suspense fallback={<CanvasLoader />}>
+                        <PerspectiveCamera makeDefault position={[0, 0, 30]}/>
                         <HackerRoom></HackerRoom>
-                    </PerspectiveCamera>
+                    </Suspense>
                 </Canvas>
             </div>
         </section>
