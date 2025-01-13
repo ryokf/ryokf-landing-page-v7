@@ -6,6 +6,7 @@ import { PerspectiveCamera } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constant";
 import Target from "../components/Target";
+import ReactLogo from '../components/ReactLogo';
 
 const Hero = () => {
     const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -36,6 +37,7 @@ const Hero = () => {
                         />
                         <group>
                             <Target position={sizes.targetPosition}></Target>
+                            <ReactLogo position={sizes.reactLogoPosition}></ReactLogo>
                         </group>
                         <ambientLight intensity={1}></ambientLight>
                         <directionalLight position={[10, 10, 10]} intensity={0.5}></directionalLight>
