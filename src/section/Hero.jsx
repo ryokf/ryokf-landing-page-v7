@@ -7,6 +7,8 @@ import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constant";
 import Target from "../components/Target";
 import ReactLogo from '../components/ReactLogo';
+import Cube from "../components/Cube";
+import Rings from "../components/Rings";
 
 const Hero = () => {
     const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -38,6 +40,8 @@ const Hero = () => {
                         <group>
                             <Target position={sizes.targetPosition}></Target>
                             <ReactLogo position={sizes.reactLogoPosition}></ReactLogo>
+                            <Cube position={sizes.cubePosition}></Cube>
+                            <Rings position={sizes.ringPosition}></Rings>
                         </group>
                         <ambientLight intensity={1}></ambientLight>
                         <directionalLight position={[10, 10, 10]} intensity={0.5}></directionalLight>
