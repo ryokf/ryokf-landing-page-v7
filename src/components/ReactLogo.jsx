@@ -6,6 +6,7 @@ const ReactLogo = (props) => {
     return (
         <Float floatIntensity={1}>
             <group position={[8, 8, 0]} scale={0.45} {...props} dispose={null}>
+            <pointLight position={[2, 2, 2]} intensity={7}></pointLight>
                 <mesh
                     geometry={nodes['React-Logo_Material002_0'].geometry}
                     material={materials['Material.002']}
