@@ -1,3 +1,4 @@
+import About from './section/About';
 import Hero from './section/Hero';
 import Navbar from './section/Navbar';
 const App = () => {
@@ -5,6 +6,7 @@ const App = () => {
     <main className='max-w-full mx-auto'>
       <Navbar></Navbar>
       <Hero></Hero>
+      <About></About>
     </main>
   )
 }
