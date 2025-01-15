@@ -28,7 +28,7 @@ const Hero = () => {
                     </span>
                     <span className="waving-hand"> 👋 </span>
                 </p>
-                <p className="hero_tag text-violet_gradient">Building immersive web experiences</p>
+                <p className="hero_tag text-violet_gradient">Build Immersive Web Experiences</p>
             </div>
             <div className="w-full h-full absolute inset-0">
                 <Canvas className="w-full h-full">
