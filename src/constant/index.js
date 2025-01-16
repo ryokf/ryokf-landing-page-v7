@@ -74,23 +74,13 @@ export const myProjects = [
         tags: [
             {
                 id: 1,
-                name: 'React.js',
-                path: '/assets/react.svg',
+                name: 'Laravel',
+                path: '/assets/laravel.png',
             },
             {
                 id: 2,
                 name: 'TailwindCSS',
                 path: 'assets/tailwindcss.png',
-            },
-            {
-                id: 3,
-                name: 'TypeScript',
-                path: '/assets/typescript.png',
-            },
-            {
-                id: 4,
-                name: 'Framer Motion',
-                path: '/assets/framer.png',
             },
         ],
     },
@@ -126,8 +116,8 @@ export const myProjects = [
             },
             {
                 id: 4,
-                name: 'Framer Motion',
-                path: '/assets/framer.png',
+                name: 'Golang',
+                path: '/assets/go.png',
             },
         ],
     },
@@ -160,13 +150,13 @@ export const myProjects = [
             },
             {
                 id: 3,
-                name: 'TypeScript',
-                path: '/assets/typescript.png',
+                name: 'Laravel',
+                path: '/assets/laravel.png',
             },
             {
                 id: 4,
-                name: 'Framer Motion',
-                path: '/assets/framer.png',
+                name: 'Inertia',
+                path: '/assets/inertia.png',
             },
         ],
     },
@@ -187,8 +177,8 @@ export const myProjects = [
         tags: [
             {
                 id: 1,
-                name: 'React.js',
-                path: '/assets/react.svg',
+                name: 'Laravel',
+                path: '/assets/laravel.png',
             },
             {
                 id: 2,
@@ -197,13 +187,8 @@ export const myProjects = [
             },
             {
                 id: 3,
-                name: 'TypeScript',
-                path: '/assets/typescript.png',
-            },
-            {
-                id: 4,
-                name: 'Framer Motion',
-                path: '/assets/framer.png',
+                name: 'Arduino',
+                path: '/assets/arduino.png',
             },
         ],
     },
@@ -224,23 +209,13 @@ export const myProjects = [
         tags: [
             {
                 id: 1,
-                name: 'React.js',
-                path: '/assets/react.svg',
+                name: 'Laravel',
+                path: '/assets/laravel.png',
             },
             {
                 id: 2,
                 name: 'TailwindCSS',
                 path: 'assets/tailwindcss.png',
-            },
-            {
-                id: 3,
-                name: 'TypeScript',
-                path: '/assets/typescript.png',
-            },
-            {
-                id: 4,
-                name: 'Framer Motion',
-                path: '/assets/framer.png',
             },
         ],
     },
