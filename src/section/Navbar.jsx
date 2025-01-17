@@ -22,7 +22,7 @@ const Navbar = () => {
     }
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 w-full bg-transparent">
+        <header className="fixed top-0 left-0 right-0 z-50 w-full bg-black/5 backdrop-blur-md ">
             <div className="max-w-7xl mx-auto">
                 <div className="flex items-center justify-between py-5 mx-auto c-space">
                     <a href="/" className="text-neutral-200 font-bold text-xl hover:text-white transition-colors">Ryokf</a>
