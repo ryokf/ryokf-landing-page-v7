@@ -1,5 +1,3 @@
-import { color } from "three/tsl";
-
 export const navLinks = [
     {
         id: 1,
@@ -224,13 +222,65 @@ export const myProjects = [
 ];
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
+    let deskScale;
+    if (isSmall) {
+        deskScale = 0.05;
+    } else if (isMobile) {
+        deskScale = 0.06;
+    } else {
+        deskScale = 0.065;
+    }
+    let cubePosition;
+    if (isSmall) {
+        cubePosition = [4, -5, 0];
+    } else if (isMobile) {
+        cubePosition = [5, -5, 0];
+    } else if (isTablet) {
+        cubePosition = [5, -5, 0];
+    } else {
+        cubePosition = [11, -4, 0];
+    }
+    
+    let reactLogoPosition;
+    if (isSmall) {
+        reactLogoPosition = [3, 4, 0];
+    } else if (isMobile) {
+        reactLogoPosition = [5, 4, 0];
+    } else if (isTablet) {
+        reactLogoPosition = [5, 4, 0];
+    } else {
+        reactLogoPosition = [12, 3, 0];
+    }
+
+    let ringPosition;
+    if (isSmall) {
+        ringPosition = [-5, 7, 0];
+    } else if (isMobile) {
+        ringPosition = [-10, 10, 0];
+    } else if (isTablet) {
+        ringPosition = [-12, 10, 0];
+    } else {
+        ringPosition = [-24, 10, 0];
+    }
+
+    let targetPosition;
+    if (isSmall) {
+        targetPosition = [-5, -10, -10];
+    } else if (isMobile) {
+        targetPosition = [-9, -10, -10];
+    } else if (isTablet) {
+        targetPosition = [-11, -7, -10];
+    } else {
+        targetPosition = [-15, -7, -10];
+    }
+
     return {
-        deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
+        deskScale: deskScale,
         deskPosition: isMobile ? [0.5, -6.5, 0] : [1.5, -4.5, 0],
-        cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [11, -4, 0],
-        reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
-        ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
-        targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-15, -7, -10],
+        cubePosition: cubePosition,
+        reactLogoPosition: reactLogoPosition,
+        ringPosition: ringPosition,
+        targetPosition: targetPosition,
     };
 };
 
