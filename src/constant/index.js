@@ -1,3 +1,5 @@
+import { color } from "three/tsl";
+
 export const navLinks = [
     {
         id: 1,
@@ -63,7 +65,7 @@ export const myProjects = [
         subdesc:
             'Built with Laravel 9 and TailwindCSS Devlearn ensures a smooth and secure learning experience, tailored to meet the needs of modern learners.',
         href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-        texture: '/textures/project/project1.mp4',
+        texture: '/textures/project/devlearn.mp4',
         logo: '/assets/project_logo/devlearn.png',
         logoStyle: {
             backgroundColor: '#000044',
@@ -90,8 +92,8 @@ export const myProjects = [
         subdesc:
             'built with reactJS, TailwindCSS, TypeScript, for frontend and golang for backend. BantuRiset is designed for optimal performance and scalability.',
         href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
-        texture: '/textures/project/project2.mp4',
-        logo: '/assets/project-logo2.png',
+        texture: '/textures/project/banturiset.mp4',
+        logo: '/assets/project_logo/banturiset.svg',
         logoStyle: {
             backgroundColor: '#13202F',
             border: '0.2px solid #17293E',
@@ -117,7 +119,7 @@ export const myProjects = [
             {
                 id: 4,
                 name: 'Golang',
-                path: '/assets/go.png',
+                path: '/assets/Go.png',
             },
         ],
     },
@@ -127,8 +129,8 @@ export const myProjects = [
         subdesc:
             'Built with Laravel 10 and ReactJS with Inertia, Olvad is designed to streamline bakery shop operations and enhance the customer experience.',
         href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
-        texture: '/textures/project/project3.mp4',
-        logo: '/assets/project-logo3.png',
+        texture: '/textures/project/olvad.mp4',
+        logo: '/assets/project_logo/olvad.png',
         logoStyle: {
             backgroundColor: '#60f5a1',
             background:
@@ -156,7 +158,7 @@ export const myProjects = [
             {
                 id: 4,
                 name: 'Inertia',
-                path: '/assets/inertia.png',
+                path: '/assets/inertia.jpg',
             },
         ],
     },
@@ -166,8 +168,8 @@ export const myProjects = [
         subdesc:
             'Built with Laravel 10 and Arduino, SmartPet is designed to provide pet owners with peace of mind and ensure the well-being of their furry friends.',
         href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-        texture: '/textures/project/project4.mp4',
-        logo: '/assets/project-logo4.png',
+        texture: '/textures/project/smart-pet.mp4',
+        logo: '/assets/project_logo/smart-pet.png',
         logoStyle: {
             backgroundColor: '#0E1F38',
             border: '0.2px solid #0E2D58',
@@ -198,8 +200,8 @@ export const myProjects = [
         subdesc:
             'Built with Laravel 10 and TailwindCSS, Agenda Dinas is built for optimal performance and scalability, ensuring a seamless event management experience.',
         href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-        texture: '/textures/project/project5.mp4',
-        logo: '/assets/project-logo5.png',
+        texture: '/textures/project/agenda-dinas.mp4',
+        logo: '/assets/project_logo/agenda-dinas.png',
         logoStyle: {
             backgroundColor: '#1C1A43',
             border: '0.2px solid #252262',
