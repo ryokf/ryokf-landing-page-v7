@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber"
 import { Center, OrbitControls } from '@react-three/drei';
 import CanvasLoader from "../components/CanvasLoader";
 import DemoComputer from '../components/DemoComputer';
+import Laptop from "../components/Laptop";
 
 const Projects = () => {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0)
@@ -61,17 +62,19 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
-                    <Canvas>
+                    <Canvas camera={{ position: [0, 1, 7], fov:50 }}>
                         <ambientLight intensity={1} />
-                        <directionalLight position={[10, 10, 5]} intensity={1} />
+                        <directionalLight position={[8, 8, 4]} intensity={2} />
                         <Center>
                             <Suspense fallback={<CanvasLoader/>}>
-                                <group position={[0, -2, 0]} rotation={[0, -0.1, 0]} scale={[1.5, 1.5, 1.5]}>
-                                    <DemoComputer texture={currentProject.texture}></DemoComputer>
+                                <group position={[0, -2.5, -0.5]} rotation={[0, -0.2, 0]} scale={1.5}>
+                                    {/* <DemoComputer texture={currentProject.texture}></DemoComputer> */}
+                                    <Laptop texture={currentProject.texture}></Laptop>
                                 </group>
                             </Suspense>
                         </Center>
                         <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+                        {/* <OrbitControls /> */}
                     </Canvas>
                 </div>
             </div>
