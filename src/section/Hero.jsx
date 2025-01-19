@@ -11,6 +11,8 @@ import Rings from "../components/Rings";
 import HeroCamera from '../components/HeroCamera';
 import Button from "../components/Button";
 import GamingRoom from '../components/GamingRoom';
+import Laptop from "../components/Laptop";
+import LaptopHero from "../components/LaptopHero";
 
 const Hero = () => {
     const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -28,29 +30,48 @@ const Hero = () => {
                     </span>
                     <span className="waving-hand"> 👋 </span>
                 </p>
-                <p className="hero_tag text-violet_gradient">Build Immersive Web Experiences</p>
+                <p className="hero_tag text-violet_gradient text-7xl">Build Immersive Web Experiences</p>
             </div>
             <div className="w-full h-full absolute inset-0">
                 <Canvas className="w-full h-full">
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-                        <HeroCamera isMobile={isMobile}>
-                            {/* <HackerRoom
-                                scale={sizes.deskScale}
-                                position={sizes.deskPosition}
-                                rotation={[0, Math.PI, 0]}
-                            />*/}
-                            <GamingRoom
-                                rotation={[0, -Math.PI /2, 0]}
-                                position={sizes.deskPosition}
-                            ></GamingRoom>
-                        </HeroCamera> 
-                        <group>
-                            <Target position={sizes.targetPosition}></Target>
-                            <ReactLogo position={sizes.reactLogoPosition}></ReactLogo>
-                            <Cube position={sizes.cubePosition}></Cube>
-                            <Rings position={sizes.ringPosition}></Rings>
-                        </group>
+                        <HeroCamera isMobile={false}>
+                            {
+                                !isMobile &&
+                                <GamingRoom
+                                    rotation={[0, -Math.PI / 2, 0]}
+                                    position={sizes.deskPosition}
+                                ></GamingRoom>
+                            }
+                            {
+                                isMobile &&
+                                <group>
+                                    <ambientLight intensity={0.5} />  
+                                    <directionalLight position={[5, 5, 5]} intensity={3} color={'#a78bfa'} /> 
+                                    <LaptopHero
+                                        position={[0, -5.5, 0]}
+                                        scale={1.5}
+                                        texture={"/textures/desk/code_screen2.png"}
+                                    ></LaptopHero>
+                                </group>
+                            }
+                        </HeroCamera>
+                        {
+                            !isMobile &&
+                            <group>
+                                <ReactLogo position={sizes.reactLogoPosition}></ReactLogo>
+                                <Rings position={sizes.ringPosition}></Rings>
+                                {
+                                    !isTablet &&
+                                    <group>
+                                        <Target position={sizes.targetPosition}></Target>
+                                        <Cube position={sizes.cubePosition}></Cube>
+                                    </group>
+                                }
+                            </group>
+                        }
+
                         <ambientLight intensity={0.4}></ambientLight>
                         {/* <directionalLight position={[10, 10, 10]} intensity={0.5} color={'blue'}></directionalLight> */}
                     </Suspense>

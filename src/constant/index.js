@@ -246,7 +246,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
     } else if (isMobile) {
         reactLogoPosition = [5, 4, 0];
     } else if (isTablet) {
-        reactLogoPosition = [5, 4, 0];
+        reactLogoPosition = [5, 2, 0];
     } else {
         reactLogoPosition = [12, 3, 0];
     }
@@ -257,7 +257,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
     } else if (isMobile) {
         ringPosition = [-10, 10, 0];
     } else if (isTablet) {
-        ringPosition = [-12, 10, 0];
+        ringPosition = [-12, 6, 0];
     } else {
         ringPosition = [-24, 10, 0];
     }

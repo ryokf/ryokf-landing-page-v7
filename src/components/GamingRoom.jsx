@@ -4,8 +4,6 @@ import { MeshBasicMaterial } from "three";
 const GamingRoom = (props) => {
     const { nodes, scene} = useGLTF("/models/gaming-room.glb");
 
-    console.log(nodes);
-
     const monitorTexture = useTexture("/textures/desk/code_screen2.png");
 
     const monitorScreenMaterial = new MeshBasicMaterial({
