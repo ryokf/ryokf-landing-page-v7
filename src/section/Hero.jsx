@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber"
 import { Suspense } from "react";
 import CanvasLoader from "../components/CanvasLoader";
-import { PerspectiveCamera } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constant";
 import Target from "../components/Target";
@@ -11,7 +11,6 @@ import Rings from "../components/Rings";
 import HeroCamera from '../components/HeroCamera';
 import Button from "../components/Button";
 import GamingRoom from '../components/GamingRoom';
-import Laptop from "../components/Laptop";
 import LaptopHero from "../components/LaptopHero";
 
 const Hero = () => {
@@ -36,7 +35,7 @@ const Hero = () => {
                 <Canvas className="w-full h-full">
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-                        <HeroCamera isMobile={false}>
+                        <HeroCamera isMobile={isMobile}>
                             {
                                 !isMobile &&
                                 <GamingRoom
@@ -44,19 +43,19 @@ const Hero = () => {
                                     position={sizes.deskPosition}
                                 ></GamingRoom>
                             }
-                            {
-                                isMobile &&
-                                <group>
-                                    <ambientLight intensity={0.5} />  
-                                    <directionalLight position={[5, 5, 5]} intensity={3} color={'#a78bfa'} /> 
-                                    <LaptopHero
-                                        position={[0, -5.5, 0]}
-                                        scale={1.5}
-                                        texture={"/textures/desk/code_screen2.png"}
-                                    ></LaptopHero>
-                                </group>
-                            }
                         </HeroCamera>
+                        {
+                            isMobile &&
+                            <group>
+                                <ambientLight intensity={0.5} />  
+                                <directionalLight position={[5, 5, 5]} intensity={3} color={'#a78bfa'} /> 
+                                <LaptopHero
+                                    position={[0, -5.5, 0]}
+                                    scale={1.5}
+                                    texture={"/textures/desk/code_screen2.png"}
+                                ></LaptopHero>
+                            </group>
+                        }
                         {
                             !isMobile &&
                             <group>
@@ -71,7 +70,6 @@ const Hero = () => {
                                 }
                             </group>
                         }
-
                         <ambientLight intensity={0.4}></ambientLight>
                         {/* <directionalLight position={[10, 10, 10]} intensity={0.5} color={'blue'}></directionalLight> */}
                     </Suspense>

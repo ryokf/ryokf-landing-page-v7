@@ -1,20 +1,15 @@
 import { useRef } from 'react'
 import { PropTypes } from 'prop-types';
-import { useGLTF, useTexture } from '@react-three/drei';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
+import { useGLTF, useTexture} from '@react-three/drei';
+import { useFrame } from '@react-three/fiber';
 const LaptopHero = (props) => {
     const group = useRef()
     const { nodes, materials } = useGLTF('/models/laptop.glb')
     const txt = useTexture(props.texture)
 
-    useGSAP(() => {
-        gsap.from(group.current.rotation,{
-            y: Math.PI / 2,
-            duration: 1,
-            ease: 'power3.out',
-        } )
-    }, [txt])
+    useFrame(() => {
+        group.current.rotation.y += 0.01
+    })
 
     return (
         <group ref={group} {...props} dispose={null}>
