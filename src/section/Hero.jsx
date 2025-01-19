@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber"
 import { Suspense } from "react";
 import CanvasLoader from "../components/CanvasLoader";
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { PerspectiveCamera } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constant";
 import Target from "../components/Target";
@@ -35,7 +35,7 @@ const Hero = () => {
                 <Canvas className="w-full h-full">
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-                        <HeroCamera isMobile={isMobile}>
+                        <HeroCamera isTablet={isTablet} isMobile={isMobile}>
                             {
                                 !isMobile &&
                                 <GamingRoom

@@ -3,7 +3,7 @@ import { easing } from "maath";
 import { useRef } from "react";
 import PropTypes from 'prop-types';
 
-const HeroCamera = ({ children, isMobile }) => {
+const HeroCamera = ({ children, isMobile, isTablet }) => {
     const groupRef = useRef();
 
     useFrame((state, delta) => {
@@ -15,11 +15,12 @@ const HeroCamera = ({ children, isMobile }) => {
     })
 
     return (
-        <group ref={groupRef}>{children}</group>
+        <group ref={groupRef} scale={isTablet ? 0.9 : 1.2}>{children}</group>
     )
 }
 HeroCamera.propTypes = {
     isMobile: PropTypes.bool.isRequired,
+    isTablet: PropTypes.bool.isRequired,
     children: PropTypes.node
 };
 
