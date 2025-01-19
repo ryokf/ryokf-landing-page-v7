@@ -3,7 +3,6 @@ import { myProjects } from "../constant"
 import { Canvas } from "@react-three/fiber"
 import { Center, OrbitControls } from '@react-three/drei';
 import CanvasLoader from "../components/CanvasLoader";
-import DemoComputer from '../components/DemoComputer';
 import Laptop from "../components/Laptop";
 
 const Projects = () => {

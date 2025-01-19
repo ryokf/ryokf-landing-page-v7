@@ -6,7 +6,7 @@ Source: https://sketchfab.com/3d-models/macbook-laptop-7ceb46a1425b475fa7f6bf192
 Title: MacBook Laptop
 */
 
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useGLTF, useVideoTexture } from '@react-three/drei'
 import { useGSAP } from '@gsap/react'
