@@ -66,7 +66,7 @@ export const myProjects = [
         texture: '/textures/project/devlearn.mp4',
         logo: '/assets/project_logo/devlearn.png',
         logoStyle: {
-            backgroundColor: '#000044',
+            backgroundColor: '#1e3a8a',
             border: '0.2px solid #000033',
             boxShadow: '0px 0px 60px 0px #000033',
         },
@@ -93,7 +93,8 @@ export const myProjects = [
         texture: '/textures/project/banturiset.mp4',
         logo: '/assets/project_logo/banturiset.svg',
         logoStyle: {
-            backgroundColor: '#13202F',
+            color: '#ffffff',
+            backgroundColor: '#60a5fa',
             border: '0.2px solid #17293E',
             boxShadow: '0px 0px 60px 0px #2F6DB54D',
         },
@@ -130,11 +131,9 @@ export const myProjects = [
         texture: '/textures/project/olvad.mp4',
         logo: '/assets/project_logo/olvad.png',
         logoStyle: {
-            backgroundColor: '#60f5a1',
-            background:
-                'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
-            border: '0.2px solid rgba(208, 213, 221, 1)',
-            boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
+            backgroundColor: '#14b8a6',
+            border: '0.2px solid #238F60',
+            boxShadow: '0px 0px 60px 0px #238F604D',
         },
         spotlight: '/assets/spotlight3.png',
         tags: [
@@ -169,7 +168,7 @@ export const myProjects = [
         texture: '/textures/project/smart-pet.mp4',
         logo: '/assets/project_logo/smart-pet.png',
         logoStyle: {
-            backgroundColor: '#0E1F38',
+            backgroundColor: '#f59e0b',
             border: '0.2px solid #0E2D58',
             boxShadow: '0px 0px 60px 0px #2F67B64D',
         },
@@ -201,7 +200,7 @@ export const myProjects = [
         texture: '/textures/project/agenda-dinas.mp4',
         logo: '/assets/project_logo/agenda-dinas.png',
         logoStyle: {
-            backgroundColor: '#1C1A43',
+            backgroundColor: '#991b1b',
             border: '0.2px solid #252262',
             boxShadow: '0px 0px 60px 0px #635BFF4D',
         },
