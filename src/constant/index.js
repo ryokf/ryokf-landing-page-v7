@@ -62,7 +62,7 @@ export const myProjects = [
         desc: 'Devlearn is a comprehensive online learning platform escpecially in the IT sector that offers users a centralized education management dashboard. It allows users to connect with instructors and monitor real-time progress.',
         subdesc:
             'Built with Laravel 9 and TailwindCSS Devlearn ensures a smooth and secure learning experience, tailored to meet the needs of modern learners.',
-        href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
+        href: 'https://learn.dnccudinus.org/',
         texture: '/textures/project/devlearn.mp4',
         logo: '/assets/project_logo/devlearn.png',
         logoStyle: {
@@ -89,7 +89,7 @@ export const myProjects = [
         desc: 'BantuRiset is a funding research platform that connects researchers with potential donors. It allows users to create and manage research projects, track funding progress, and collaborate with other researchers.',
         subdesc:
             'built with reactJS, TailwindCSS, TypeScript, for frontend and golang for backend. BantuRiset is designed for optimal performance and scalability.',
-        href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
+        href: 'https://banturiset.vercel.app/',
         texture: '/textures/project/banturiset.mp4',
         logo: '/assets/project_logo/banturiset.svg',
         logoStyle: {
@@ -127,7 +127,7 @@ export const myProjects = [
         desc: 'Olvad is a POS system for a bakery shop that allows users to manage inventory, track sales, and optimize operations. It provides a user-friendly interface and efficient data management.',
         subdesc:
             'Built with Laravel 10 and ReactJS with Inertia, Olvad is designed to streamline bakery shop operations and enhance the customer experience.',
-        href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
+        href: 'https://github.com/ryokf/pos-app',
         texture: '/textures/project/olvad.mp4',
         logo: '/assets/project_logo/olvad.png',
         logoStyle: {
@@ -164,7 +164,7 @@ export const myProjects = [
         desc: 'SmartPet is a pet care app that offers users a centralized platform to manage their pet’s health and well-being. Integrated with a smart collar for tracking and monitoring pet behavior and IOT for automatic feeding.',
         subdesc:
             'Built with Laravel 10 and Arduino, SmartPet is designed to provide pet owners with peace of mind and ensure the well-being of their furry friends.',
-        href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
+        href: 'https://github.com/Agnestia/SmartPetLaravel',
         texture: '/textures/project/smart-pet.mp4',
         logo: '/assets/project_logo/smart-pet.png',
         logoStyle: {
@@ -196,7 +196,7 @@ export const myProjects = [
         desc: 'Agenda Dinas is an event management app that allows users to create and manage events, track attendance, and generate reports. It provides a centralized platform for event planning and execution.',
         subdesc:
             'Built with Laravel 10 and TailwindCSS, Agenda Dinas is built for optimal performance and scalability, ensuring a seamless event management experience.',
-        href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
+        href: 'https://github.com/Hary1833/sch-app-p2',
         texture: '/textures/project/agenda-dinas.mp4',
         logo: '/assets/project_logo/agenda-dinas.png',
         logoStyle: {
