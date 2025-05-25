@@ -59,9 +59,8 @@ export const clientReviews = [
 export const myProjects = [
     {
         title: 'Devlearn - Online Learning Platform',
-        desc: 'Devlearn is a comprehensive online learning platform escpecially in the IT sector that offers users a centralized education management dashboard. It allows users to connect with instructors and monitor real-time progress.',
-        subdesc:
-            'Built with Laravel 9 and TailwindCSS Devlearn ensures a smooth and secure learning experience, tailored to meet the needs of modern learners.',
+        desc: 'Devlearn is a centralized online learning platform focused on the IT sector, enabling users to connect with instructors and track their learning progress in real time.',
+        subdesc: 'Developed using Laravel 9 and TailwindCSS, Devlearn offers a seamless, secure, and modern e-learning experience tailored for today\'s learners.',
         href: 'https://learn.dnccudinus.org/',
         texture: '/textures/project/devlearn.mp4',
         logo: '/assets/project_logo/devlearn.png',
@@ -85,15 +84,14 @@ export const myProjects = [
         ],
     },
     {
-        title: 'WebAssmebly and js Comparison Website',
-        desc: 'I developed a website that compares webassembly and javascript. It provides a user-friendly interface and efficient data management.',
-        subdesc:
-            'Built with Rust and Javascript, WebAssmebly and js Comparison Website is designed to experiment performance of webassembly and javascript.',
+        title: 'WebAssmebly and js Comparison Website (ongoing)',
+        desc: 'This website was developed as part of a research project comparing the performance of WebAssembly and JavaScript in image processing tasks.',
+        subdesc: 'Built with Rust and JavaScript, the platform provides a testbed to evaluate and contrast the execution efficiency of both technologies.',
         href: 'https://learn.dnccudinus.org/',
-        texture: '/textures/project/devlearn.mp4',
-        logo: '/assets/project_logo/devlearn.png',
+        texture: '/textures/project/wasm-compare.mp4',
+        logo: '/assets/wasm.png',
         logoStyle: {
-            backgroundColor: '#1e3a8a',
+            backgroundColor: 'oklch(67.3% 0.182 276.935)',
             border: '0.2px solid #000033',
             boxShadow: '0px 0px 60px 0px #000033',
         },
@@ -101,21 +99,61 @@ export const myProjects = [
         tags: [
             {
                 id: 1,
-                name: 'Laravel',
-                path: '/assets/laravel.png',
+                name: 'React.js',
+                path: '/assets/react.svg',
             },
             {
                 id: 2,
+                name: 'WebAssembly',
+                path: 'assets/wasm.png',
+            },
+            {
+                id: 3,
+                name: 'Rust',
+                path: 'assets/rust.png',
+            },
+            {
+                id: 4,
                 name: 'TailwindCSS',
                 path: 'assets/tailwindcss.png',
             },
         ],
     },
     {
-        title: 'BantuRiset - Funding Research Platform',
-        desc: 'BantuRiset is a funding research platform that connects researchers with potential donors. It allows users to create and manage research projects, track funding progress, and collaborate with other researchers.',
-        subdesc:
-            'built with reactJS, TailwindCSS, TypeScript, for frontend and golang for backend. BantuRiset is designed for optimal performance and scalability.',
+        title: 'Inkura - An International Platform For Original Works (ongoing)',
+        desc: 'Inkura is a collaborative platform developed for a digital startup project, designed to showcase and manage original user-created works.',
+        subdesc: 'Powered by NextJS and Supabase, Inkura delivers an intuitive interface and reliable backend for content management and collaboration.',
+        href: 'https://learn.dnccudinus.org/',
+        texture: '/textures/project/inkura.mp4',
+        logo: '/assets/project_logo/inkura.webp',
+        logoStyle: {
+            backgroundColor: 'oklch(45.2% 0.211 324.591)',
+            border: '0.2px solid #000033',
+            boxShadow: '0px 0px 60px 0px #000033',
+        },
+        spotlight: '/assets/spotlight1.png',
+        tags: [
+            {
+                id: 1,
+                name: 'NextJS',
+                path: '/assets/nextjs.png',
+            },
+            {
+                id: 2,
+                name: 'Supabase',
+                path: 'assets/supabase.png',
+            },
+            {
+                id: 3,
+                name: 'TailwindCSS',
+                path: 'assets/tailwindcss.png',
+            },
+        ],
+    },
+    {
+        title: 'BantuRiset - Funding Research Platform (ongoing)',
+        desc: 'BantuRiset connects researchers with potential donors, supporting project management, funding tracking, and collaboration.',
+        subdesc: 'Built with ReactJS, TailwindCSS, TypeScript for the frontend and Golang for the backend, ensuring performance and scalability.',
         href: 'https://banturiset.vercel.app/',
         texture: '/textures/project/banturiset.mp4',
         logo: '/assets/project_logo/banturiset.svg',
@@ -151,11 +189,10 @@ export const myProjects = [
     },
     {
         title: 'POS System for Bakery Shop',
-        desc: 'I developed a POS system for a bakery shop that allows users to manage inventory, track sales, and optimize operations. It provides a user-friendly interface and efficient data management.',
-        subdesc:
-            'Built with Laravel 10 and ReactJS with Inertia, Olvad is designed to streamline bakery shop operations and enhance the customer experience.',
+        desc: 'A Point-of-Sale system tailored for bakery shops, providing features for inventory management, sales tracking, and operations optimization.',
+        subdesc: 'Developed with Laravel 10 and ReactJS using Inertia.js, the system streamlines daily tasks and enhances customer service.',
         href: 'https://github.com/ryokf/pos-app',
-        texture: '/textures/project/olvad.mp4',
+        texture: '/textures/project/pos-bakery.mp4',
         logo: '/assets/project_logo/olvad.png',
         logoStyle: {
             backgroundColor: '#14b8a6',
@@ -188,9 +225,8 @@ export const myProjects = [
     },
     {
         title: 'Olvad - E-Commerce for Bakery Shop',
-        desc: 'Olvad is a E-Commerce for a bakery shop that allows users to see or buy products. It provides a user-friendly interface and efficient data management.',
-        subdesc:
-            'Built with NextJS and Supabase, Olvad is designed to streamline bakery shop operations and enhance the customer experience.',
+        desc: 'Olvad is an e-commerce platform that allows users to browse and purchase bakery products with ease.',
+        subdesc: 'Built using NextJS and Supabase, Olvad is designed to optimize online bakery sales and simplify the customer journey.',
         href: 'https://github.com/ryokf/pos-app',
         texture: '/textures/project/olvad.mp4',
         logo: '/assets/project_logo/olvad.png',
@@ -203,8 +239,8 @@ export const myProjects = [
         tags: [
             {
                 id: 1,
-                name: 'React.js',
-                path: '/assets/react.svg',
+                name: 'NextJS',
+                path: '/assets/nextjs.png',
             },
             {
                 id: 2,
@@ -213,21 +249,15 @@ export const myProjects = [
             },
             {
                 id: 3,
-                name: 'Laravel',
-                path: '/assets/laravel.png',
-            },
-            {
-                id: 4,
-                name: 'Inertia',
-                path: '/assets/inertia.jpg',
+                name: 'Supabase',
+                path: '/assets/supabase.png',
             },
         ],
     },
     {
         title: 'SmartPet - Pet Care App',
-        desc: 'SmartPet is a pet care app that offers users a centralized platform to manage their pet’s health and well-being. Integrated with a smart collar for tracking and monitoring pet behavior and IOT for automatic feeding.',
-        subdesc:
-            'Built with Laravel 10 and Arduino, SmartPet is designed to provide pet owners with peace of mind and ensure the well-being of their furry friends.',
+        desc: 'SmartPet is an IoT-enabled pet care solution featuring smart collar integration for activity tracking and automated feeding.',
+        subdesc: 'Created with Laravel 10 and Arduino, SmartPet offers a complete ecosystem for monitoring and managing pet health.',
         href: 'https://github.com/Agnestia/SmartPetLaravel',
         texture: '/textures/project/smart-pet.mp4',
         logo: '/assets/project_logo/smart-pet.png',
@@ -256,29 +286,33 @@ export const myProjects = [
         ],
     },
     {
-        title: 'Agenda Dinas - Event Management App',
-        desc: 'Agenda Dinas is an event management app that allows users to create and manage events, track attendance, and generate reports. It provides a centralized platform for event planning and execution.',
-        subdesc:
-            'Built with Laravel 10 and TailwindCSS, Agenda Dinas is built for optimal performance and scalability, ensuring a seamless event management experience.',
-        href: 'https://github.com/Hary1833/sch-app-p2',
-        texture: '/textures/project/agenda-dinas.mp4',
+        title: 'Rebranding SMPN 20 Semarang',
+        desc: 'A website redesign initiative developed during an internship at DISKOMINFO Semarang, aimed at improving the school\'s digital presence.',
+        subdesc: 'Built with ReactJS and Supabase, the platform features modern UI and robust backend capabilities for content management.',
+        href: 'https://github.com/Agnestia/SmartPetLaravel',
+        texture: '/textures/project/smp20.mp4',
         logo: '/assets/project_logo/agenda-dinas.png',
         logoStyle: {
-            backgroundColor: '#991b1b',
-            border: '0.2px solid #252262',
-            boxShadow: '0px 0px 60px 0px #635BFF4D',
+            backgroundColor: '#f59e0b',
+            border: '0.2px solid #0E2D58',
+            boxShadow: '0px 0px 60px 0px #2F67B64D',
         },
-        spotlight: '/assets/spotlight5.png',
+        spotlight: '/assets/spotlight4.png',
         tags: [
             {
                 id: 1,
-                name: 'Laravel',
-                path: '/assets/laravel.png',
+                name: 'ReactJS',
+                path: '/assets/react.svg',
             },
             {
                 id: 2,
                 name: 'TailwindCSS',
                 path: 'assets/tailwindcss.png',
+            },
+            {
+                id: 3,
+                name: 'Supabase',
+                path: '/assets/supabase.png',
             },
         ],
     },
@@ -303,7 +337,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
     } else {
         cubePosition = [11, -4, 0];
     }
-    
+
     let reactLogoPosition;
     if (isSmall) {
         reactLogoPosition = [3, 4, 0];
