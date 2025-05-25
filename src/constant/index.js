@@ -85,6 +85,33 @@ export const myProjects = [
         ],
     },
     {
+        title: 'WebAssmebly and js Comparison Website',
+        desc: 'I developed a website that compares webassembly and javascript. It provides a user-friendly interface and efficient data management.',
+        subdesc:
+            'Built with Rust and Javascript, WebAssmebly and js Comparison Website is designed to experiment performance of webassembly and javascript.',
+        href: 'https://learn.dnccudinus.org/',
+        texture: '/textures/project/devlearn.mp4',
+        logo: '/assets/project_logo/devlearn.png',
+        logoStyle: {
+            backgroundColor: '#1e3a8a',
+            border: '0.2px solid #000033',
+            boxShadow: '0px 0px 60px 0px #000033',
+        },
+        spotlight: '/assets/spotlight1.png',
+        tags: [
+            {
+                id: 1,
+                name: 'Laravel',
+                path: '/assets/laravel.png',
+            },
+            {
+                id: 2,
+                name: 'TailwindCSS',
+                path: 'assets/tailwindcss.png',
+            },
+        ],
+    },
+    {
         title: 'BantuRiset - Funding Research Platform',
         desc: 'BantuRiset is a funding research platform that connects researchers with potential donors. It allows users to create and manage research projects, track funding progress, and collaborate with other researchers.',
         subdesc:
@@ -123,10 +150,47 @@ export const myProjects = [
         ],
     },
     {
-        title: 'Olvad - POS System for Bakery Shop',
-        desc: 'Olvad is a POS system for a bakery shop that allows users to manage inventory, track sales, and optimize operations. It provides a user-friendly interface and efficient data management.',
+        title: 'POS System for Bakery Shop',
+        desc: 'I developed a POS system for a bakery shop that allows users to manage inventory, track sales, and optimize operations. It provides a user-friendly interface and efficient data management.',
         subdesc:
             'Built with Laravel 10 and ReactJS with Inertia, Olvad is designed to streamline bakery shop operations and enhance the customer experience.',
+        href: 'https://github.com/ryokf/pos-app',
+        texture: '/textures/project/olvad.mp4',
+        logo: '/assets/project_logo/olvad.png',
+        logoStyle: {
+            backgroundColor: '#14b8a6',
+            border: '0.2px solid #238F60',
+            boxShadow: '0px 0px 60px 0px #238F604D',
+        },
+        spotlight: '/assets/spotlight3.png',
+        tags: [
+            {
+                id: 1,
+                name: 'React.js',
+                path: '/assets/react.svg',
+            },
+            {
+                id: 2,
+                name: 'TailwindCSS',
+                path: 'assets/tailwindcss.png',
+            },
+            {
+                id: 3,
+                name: 'Laravel',
+                path: '/assets/laravel.png',
+            },
+            {
+                id: 4,
+                name: 'Inertia',
+                path: '/assets/inertia.jpg',
+            },
+        ],
+    },
+    {
+        title: 'Olvad - E-Commerce for Bakery Shop',
+        desc: 'Olvad is a E-Commerce for a bakery shop that allows users to see or buy products. It provides a user-friendly interface and efficient data management.',
+        subdesc:
+            'Built with NextJS and Supabase, Olvad is designed to streamline bakery shop operations and enhance the customer experience.',
         href: 'https://github.com/ryokf/pos-app',
         texture: '/textures/project/olvad.mp4',
         logo: '/assets/project_logo/olvad.png',
@@ -288,7 +352,7 @@ export const workExperiences = [
         id: 1,
         name: 'DNCC',
         pos: 'Mobile Division',
-        duration: '2023 - 2024',
+        duration: '2022 - 2024',
         title: "As a Mobile Division, I was learning and improving my skills in mobile development using Flutter. and also learn softskills such as communication and teamwork.",
         icon: '/assets/logo2.png',
         animation: 'victory',
@@ -301,5 +365,14 @@ export const workExperiences = [
         title: "As a Laboratory Assistant, I helped students in the laboratory to learn and practice their skills in subjects such as Programming Algorithm, Database, Web Programming and more.",
         icon: '/assets/udinus.png',
         animation: 'clapping',
+    },
+    {
+        id: 3,
+        name: 'DISKOMINFO Kota Semarang',
+        pos: 'Web Developer Intern',
+        duration: '2025',
+        title: "As a Web Developer Intern, I was learning and improving my skills in web development using ReactJS and Supabase. and also learn softskills such as communication and teamwork.",
+        icon: '/assets/diskominfo.png',
+        animation: 'victory',
     },
 ];
