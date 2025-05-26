@@ -11,17 +11,17 @@ const Contact = () => {
         message: ''
     })
 
-    const handleChange = ({target : {name, value}}) => {
-        setForm({...form, [name]: value})
+    const handleChange = ({ target: { name, value } }) => {
+        setForm({ ...form, [name]: value })
     }
 
-    const handleSubmit =  async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         setLoading(true)
 
-        try{
+        try {
             await emailjs.send(
-                'service_id6gdnn', 
+                'service_id6gdnn',
                 "template_uowtako",
                 {
                     from_name: form.name,
@@ -35,7 +35,7 @@ const Contact = () => {
 
             setLoading(false)
             alert('Thank you. I will get back to you as soon as possible.')
-        }catch(error){
+        } catch (error) {
             setLoading(false)
             console.log(error)
             alert('Something went wrong.')
@@ -44,7 +44,8 @@ const Contact = () => {
     }
 
     return (
-        <section className="c-space my-20 max-w-7xl mx-auto" id="contact">
+    <div className="bg-gradient-to-t from-violet-800">
+        <section className="c-space py-20 max-w-7xl mx-auto" id="contact">
             <div className="relative min-h-screen flex items-center justify-center flex-col">
                 <img src="assets/terminal.png" alt="terminal background" className="absolute inset-0 min-h-screen" />
                 <div className="contact-container">
@@ -53,7 +54,7 @@ const Contact = () => {
                     <form action="" ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
                         <label className="space-y-3">
                             <span className="field-label">full name</span>
-                            <input 
+                            <input
                                 type="text"
                                 name="name"
                                 value={form.name}
@@ -65,7 +66,7 @@ const Contact = () => {
                         </label>
                         <label className="space-y-3">
                             <span className="field-label">email</span>
-                            <input 
+                            <input
                                 type="email"
                                 name="email"
                                 value={form.email}
@@ -77,7 +78,7 @@ const Contact = () => {
                         </label>
                         <label className="space-y-3">
                             <span className="field-label">your message</span>
-                            <textarea 
+                            <textarea
                                 name="message"
                                 value={form.message}
                                 onChange={handleChange}
@@ -91,6 +92,7 @@ const Contact = () => {
                 </div>
             </div>
         </section>
+    </div>
     )
 }
 
