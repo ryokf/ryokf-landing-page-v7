@@ -123,7 +123,7 @@ export const myProjects = [
         title: 'Inkura - An International Platform For Original Works (ongoing)',
         desc: 'Inkura is a collaborative platform developed for a digital startup project, designed to showcase and manage original user-created works.',
         subdesc: 'Powered by NextJS and Supabase, Inkura delivers an intuitive interface and reliable backend for content management and collaboration.',
-        href: 'https://learn.dnccudinus.org/',
+        href: 'https://inkuraid.vercel.app/',
         texture: '/textures/project/inkura.mp4',
         logo: '/assets/project_logo/inkura.webp',
         logoStyle: {
@@ -227,7 +227,7 @@ export const myProjects = [
         title: 'Olvad - E-Commerce for Bakery Shop',
         desc: 'Olvad is an e-commerce platform that allows users to browse and purchase bakery products with ease.',
         subdesc: 'Built using NextJS and Supabase, Olvad is designed to optimize online bakery sales and simplify the customer journey.',
-        href: 'https://github.com/ryokf/pos-app',
+        href: 'https://olvad.vercel.app/',
         texture: '/textures/project/olvad.mp4',
         logo: '/assets/project_logo/olvad.png',
         logoStyle: {
@@ -289,7 +289,7 @@ export const myProjects = [
         title: 'Rebranding SMPN 20 Semarang',
         desc: 'A website redesign initiative developed during an internship at DISKOMINFO Semarang, aimed at improving the school\'s digital presence.',
         subdesc: 'Built with ReactJS and Supabase, the platform features modern UI and robust backend capabilities for content management.',
-        href: 'https://github.com/Agnestia/SmartPetLaravel',
+        href: 'https://smpn20smg.vercel.app/',
         texture: '/textures/project/smp20.mp4',
         logo: '/assets/project_logo/agenda-dinas.png',
         logoStyle: {

@@ -46,8 +46,8 @@ const About = () => {
 
                 <div className="col-span-1 xl:row-span-4">
                     <div className="grid-container">
-                        <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
-                            <Globe
+                        <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center overflow-hidden opcacity-70">
+                            {/* <Globe
                                 height={326}
                                 width={326}
                                 backgroundColor="rgba(0, 0, 0, 0)"
@@ -57,12 +57,15 @@ const About = () => {
                                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
                                 labelsData={[{ lat: -7, lng: 110, text: 'Semarang, Indonesia', color: 'white', size: 15 }]}
-                            />
+                            /> */}
+                            <img src="assets/writing-article.jpg" alt="" />
                         </div>
                         <div>
-                            <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
-                            <p className="grid-subtext">I&apos;m based in Semarang, Indonesia and open to remote work worldwide.</p>
-                            <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+                            <p className="grid-headtext">I love writing articles about programming & tech</p>
+                            <p className="grid-subtext">In my spare time, I love spending time writing blog posts about programming and tech. It’s my little space to share what I’ve learned, experiment with new ideas, and connect with others who are passionate about the same things. I hope you enjoy reading them as much as I enjoy writing them!</p>
+                            <a href="https://medium.com/@ryokhrisnaf">
+                                <Button name="Read my article" isBeam containerClass="w-full mt-10" />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +76,7 @@ const About = () => {
                         <div>
                             <p className="grid-headtext">My Current Focus</p>
                             <p className="grid-subtext">
-                                I&apos;m currently focusing on building immersive web experiences using 3D technology such as Three.js to enhance user engagement.
+                                I’m currently focused on creating immersive web experiences using 3D technologies like Three.js to boost user engagement. In addition, I’m exploring WebAssembly as part of my research project to push the boundaries of performance on the web.
                             </p>
                         </div>
                     </div>
