@@ -87,7 +87,7 @@ export const myProjects = [
         title: 'WebAssmebly and js Comparison Website (ongoing)',
         desc: 'This website was developed as part of a research project comparing the performance of WebAssembly and JavaScript in image processing tasks.',
         subdesc: 'Built with Rust and JavaScript, the platform provides a testbed to evaluate and contrast the execution efficiency of both technologies.',
-        href: 'https://learn.dnccudinus.org/',
+        href: 'https://github.com/ryokf/wasm-image-processing-comparison',
         texture: '/textures/project/wasm-compare.mp4',
         logo: '/assets/wasm.png',
         logoStyle: {
