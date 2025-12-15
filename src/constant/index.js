@@ -120,10 +120,10 @@ export const myProjects = [
         ],
     },
     {
-        title: 'Inkura - An International Platform For Original Works (ongoing)',
-        desc: 'Inkura is a collaborative platform developed for a digital startup project, designed to showcase and manage original user-created works.',
-        subdesc: 'Powered by NextJS and Supabase, Inkura delivers an intuitive interface and reliable backend for content management and collaboration.',
-        href: 'https://inkuraid.vercel.app/',
+        title: 'LiniAksara - An International Platform For Original Works (ongoing)',
+        desc: 'LiniAksara is a collaborative platform developed for a digital startup project, designed to showcase and manage original user-created works.',
+        subdesc: 'Powered by NextJS and Supabase, LiniAksara delivers an intuitive interface and reliable backend for content management and collaboration.',
+        href: 'https://liniaksara.vercel.app/',
         texture: '/textures/project/inkura.mp4',
         logo: '/assets/project_logo/inkura.webp',
         logoStyle: {
@@ -383,12 +383,21 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 
 export const workExperiences = [
     {
-        id: 1,
-        name: 'DNCC',
-        pos: 'Mobile Division',
-        duration: '2022 - 2024',
-        title: "As a Mobile Division, I was learning and improving my skills in mobile development using Flutter. and also learn softskills such as communication and teamwork.",
-        icon: '/assets/logo2.png',
+        id: 4,
+        name: 'PT Telkomsel',
+        pos: 'Software Engineer Intern',
+        duration: '2025',
+        title: "As a Software Engineer Intern, I was learning and improving my skills in software development using Laravel, nodeJS and Unity. and also learn softskills such as communication and teamwork.",
+        icon: '/assets/Telkomsel.svg',
+        animation: 'victory',
+    },
+    {
+        id: 3,
+        name: 'DISKOMINFO Kota Semarang',
+        pos: 'Web Developer Intern',
+        duration: '2025',
+        title: "As a Web Developer Intern, I was learning and improving my skills in web development using ReactJS and Supabase. and also learn softskills such as communication and teamwork.",
+        icon: '/assets/diskominfo.png',
         animation: 'victory',
     },
     {
@@ -401,12 +410,12 @@ export const workExperiences = [
         animation: 'clapping',
     },
     {
-        id: 3,
-        name: 'DISKOMINFO Kota Semarang',
-        pos: 'Web Developer Intern',
-        duration: '2025',
-        title: "As a Web Developer Intern, I was learning and improving my skills in web development using ReactJS and Supabase. and also learn softskills such as communication and teamwork.",
-        icon: '/assets/diskominfo.png',
+        id: 1,
+        name: 'DNCC',
+        pos: 'Mobile Division',
+        duration: '2022 - 2024',
+        title: "As a Mobile Division, I was learning and improving my skills in mobile development using Flutter. and also learn softskills such as communication and teamwork.",
+        icon: '/assets/logo2.png',
         animation: 'victory',
     },
 ];

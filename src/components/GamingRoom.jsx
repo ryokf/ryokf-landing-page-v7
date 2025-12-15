@@ -2,14 +2,14 @@ import { useGLTF, useTexture } from "@react-three/drei";
 import { MeshBasicMaterial } from "three";
 
 const GamingRoom = (props) => {
-    const { nodes, scene} = useGLTF("/models/gaming-room.glb");
+    const { nodes, scene } = useGLTF("/models/gaming-room.glb");
 
     const monitorTexture = useTexture("/textures/desk/code_screen2.png");
 
     const monitorScreenMaterial = new MeshBasicMaterial({
         metalness: 0.9,
         map: monitorTexture
-        
+
     });
 
 
