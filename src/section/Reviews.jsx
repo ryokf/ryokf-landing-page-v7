@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import { clientReviews } from '../constant';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Reviews = () => {
+    const { language } = useLanguage();
+    const t = translations[language].reviews;
     const [currentIndex, setCurrentIndex] = useState(0);
     const currentReview = clientReviews[currentIndex];
 
@@ -20,9 +24,9 @@ const Reviews = () => {
     return (
         <section className="c-space my-20 max-w-7xl mx-auto" id="reviews">
             <div className="w-full">
-                <h2 className="head-text">Client Reviews</h2>
+                <h2 className="head-text">{t.title}</h2>
                 <p className="text-white-600 mt-3 text-lg">
-                    What my clients say about working with me
+                    {t.subtitle}
                 </p>
             </div>
 

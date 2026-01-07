@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { services } from '../constant';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 const ServiceCard = ({ service }) => {
     const [transform, setTransform] = useState('');
@@ -54,12 +55,24 @@ const ServiceCard = ({ service }) => {
 };
 
 const Services = () => {
+    const { language } = useLanguage();
+    const t = translations[language].services;
+
+    const services = [
+        { id: 1, title: t.webDev.title, description: t.webDev.desc, icon: '🌐' },
+        { id: 2, title: t.mobileDev.title, description: t.mobileDev.desc, icon: '📱' },
+        { id: 3, title: t.uiux.title, description: t.uiux.desc, icon: '🎨' },
+        { id: 4, title: t.web3d.title, description: t.web3d.desc, icon: '🎮' },
+        { id: 5, title: t.api.title, description: t.api.desc, icon: '⚡' },
+        { id: 6, title: t.performance.title, description: t.performance.desc, icon: '🚀' },
+    ];
+
     return (
         <section className="c-space my-20 max-w-7xl mx-auto" id="services">
             <div className="w-full">
-                <h2 className="head-text">My Services</h2>
+                <h2 className="head-text">{t.title}</h2>
                 <p className="text-white-600 mt-3 text-lg">
-                    I offer a comprehensive range of development services to bring your ideas to life
+                    {t.subtitle}
                 </p>
             </div>
 

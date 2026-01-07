@@ -4,12 +4,16 @@ import { OrbitControls } from '@react-three/drei';
 import { Suspense } from 'react';
 import CanvasLoader from '../components/CanvasLoader';
 import Developer from '../components/Developer';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Experience = () => {
+    const { language } = useLanguage();
+    const t = translations[language].experience;
     return (
         <section className='c-space my-20 max-w-7xl mx-auto'>
             <div className="w-full text-white-600">
-                <h3 className='head-text'>My Experience</h3>
+                <h3 className='head-text'>{t.title}</h3>
                 <div className="work-container">
                     <div className="work-canvas hidden lg:block">
                         <Canvas>

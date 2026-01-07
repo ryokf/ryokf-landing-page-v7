@@ -1,8 +1,12 @@
 import { useRef, useState } from "react"
 import emailjs from '@emailjs/browser'
 import toast, { Toaster } from 'react-hot-toast'
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Contact = () => {
+    const { language } = useLanguage();
+    const t = translations[language].contact;
     const formRef = useRef()
 
     const [loading, setLoading] = useState(false)
@@ -35,7 +39,7 @@ const Contact = () => {
             )
 
             setLoading(false)
-            toast.success('Thank you! I will get back to you as soon as possible.', {
+            toast.success(t.successMessage, {
                 duration: 4000,
                 position: 'bottom-center',
                 style: {
@@ -55,7 +59,7 @@ const Contact = () => {
         } catch (error) {
             setLoading(false)
             console.log(error)
-            toast.error('Something went wrong. Please try again.', {
+            toast.error(t.errorMessage, {
                 duration: 4000,
                 position: 'bottom-center',
                 style: {
@@ -80,11 +84,11 @@ const Contact = () => {
                 <div className="relative min-h-screen flex items-center justify-center flex-col">
                     <img src="assets/terminal.png" alt="terminal background" className="absolute inset-0 min-h-screen" />
                     <div className="contact-container">
-                        <h3 className="head-text">Let&apos;s talk</h3>
-                        <p className="text-lg text-white-600 mt-3">whether you have a question or just want to say hi, my inbox is open for all.</p>
+                        <h3 className="head-text">{t.title}</h3>
+                        <p className="text-lg text-white-600 mt-3">{t.subtitle}</p>
                         <form action="" ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
                             <label className="space-y-3">
-                                <span className="field-label">full name</span>
+                                <span className="field-label">{t.fullName}</span>
                                 <input
                                     type="text"
                                     name="name"
@@ -92,11 +96,11 @@ const Contact = () => {
                                     onChange={handleChange}
                                     required
                                     className="field-input"
-                                    placeholder="what's your name?"
+                                    placeholder={t.namePlaceholder}
                                 />
                             </label>
                             <label className="space-y-3">
-                                <span className="field-label">email</span>
+                                <span className="field-label">{t.email}</span>
                                 <input
                                     type="email"
                                     name="email"
@@ -104,21 +108,21 @@ const Contact = () => {
                                     onChange={handleChange}
                                     required
                                     className="field-input"
-                                    placeholder="what's your email?"
+                                    placeholder={t.emailPlaceholder}
                                 />
                             </label>
                             <label className="space-y-3">
-                                <span className="field-label">your message</span>
+                                <span className="field-label">{t.message}</span>
                                 <textarea
                                     name="message"
                                     value={form.message}
                                     onChange={handleChange}
                                     required
                                     className="field-input"
-                                    placeholder="what do you want to say?"
+                                    placeholder={t.messagePlaceholder}
                                 />
                             </label>
-                            <button className="field-btn" type="submit" disabled={loading}>{loading ? 'Sending...' : 'Send Message'}</button>
+                            <button className="field-btn" type="submit" disabled={loading}>{loading ? t.sending : t.sendMessage}</button>
                         </form>
                     </div>
                 </div>

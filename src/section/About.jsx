@@ -1,8 +1,11 @@
 import { useState } from 'react';
-
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 import Button from '../components/Button.jsx';
 
 const About = () => {
+    const { language } = useLanguage();
+    const t = translations[language].about;
     const [hasCopied, setHasCopied] = useState(false);
 
     const handleCopy = () => {
@@ -22,9 +25,9 @@ const About = () => {
                         <img src="assets/photo-profile.JPG" alt="Ryo Khrisna Fitriawan" className="w-full sm:h-[276px] h-fit object-contain" />
 
                         <div>
-                            <p className="grid-headtext">Hi, I’m Ryo Khrisna Fitriawan</p>
+                            <p className="grid-headtext">{t.title}</p>
                             <p className="grid-subtext">
-                                With 3 years of journey, I have honed my skills in frontend web development and UI/UX design to create immersive and user-friendly experience.
+                                {t.description}
                             </p>
                         </div>
                     </div>
@@ -34,10 +37,9 @@ const About = () => {
                     <div className="grid-container">
                         <img src="assets/skill.png" alt="Technology stack and programming skills" className="w-full sm:h-[276px] h-fit object-contain backdrop-filter backdrop-blur-lg" />
                         <div>
-                            <p className="grid-headtext">Tech Stack</p>
+                            <p className="grid-headtext">{t.techStack}</p>
                             <p className="grid-subtext">
-                                I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable
-                                applications
+                                {t.techStackDesc}
                             </p>
                         </div>
                     </div>
@@ -49,10 +51,10 @@ const About = () => {
                             <img src="assets/writing-article.jpg" alt="Writing programming articles and blog posts" />
                         </div>
                         <div>
-                            <p className="grid-headtext">I love writing articles about programming & tech</p>
-                            <p className="grid-subtext">In my spare time, I love spending time writing blog posts about programming and tech. It’s my little space to share what I’ve learned, experiment with new ideas, and connect with others who are passionate about the same things. I hope you enjoy reading them as much as I enjoy writing them!</p>
+                            <p className="grid-headtext">{t.writingTitle}</p>
+                            <p className="grid-subtext">{t.writingDesc}</p>
                             <a href="https://medium.com/@ryokhrisnaf">
-                                <Button name="Read my article" isBeam containerClass="w-full mt-10" />
+                                <Button name={t.readArticle} isBeam containerClass="w-full mt-10" />
                             </a>
                         </div>
                     </div>
@@ -62,9 +64,9 @@ const About = () => {
                     <div className="grid-container">
                         <img src="assets/grid-test.jpg" alt="3D web development and WebAssembly research" className="w-full sm:h-[266px] h-fit backdrop-filter backdrop-brightness-0" />
                         <div>
-                            <p className="grid-headtext">My Current Focus</p>
+                            <p className="grid-headtext">{t.currentFocus}</p>
                             <p className="grid-subtext">
-                                I’m focused on creating immersive web experiences using 3D technologies and WebAssembly. Currently, I act as a strategic partner for businesses needing custom solutions, and I am also open to full-time Software Engineer opportunities.
+                                {t.currentFocusDesc}
                             </p>
                         </div>
                     </div>
@@ -79,7 +81,7 @@ const About = () => {
                         />
 
                         <div className="space-y-2">
-                            <p className="grid-subtext text-center">Contact me</p>
+                            <p className="grid-subtext text-center">{t.contactMe}</p>
                             <div className="copy-container" onClick={handleCopy}>
                                 <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
                                 <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">ryokhrisnaf@gmail.com</p>

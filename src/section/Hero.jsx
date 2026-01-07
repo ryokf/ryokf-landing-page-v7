@@ -12,8 +12,12 @@ import HeroCamera from '../components/HeroCamera';
 import Button from "../components/Button";
 import GamingRoom from '../components/GamingRoom';
 import LaptopHero from "../components/LaptopHero";
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Hero = () => {
+    const { language } = useLanguage();
+    const t = translations[language].hero;
     const isSmall = useMediaQuery({ maxWidth: 440 });
     const isMobile = useMediaQuery({ maxWidth: 768 });
     const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
@@ -25,11 +29,11 @@ const Hero = () => {
             <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
                 <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
                     <span>
-                        Hi, I am Ryo Khrisna Fitriawan
+                        {t.greeting}
                     </span>
                     <span className="waving-hand"> 👋 </span>
                 </p>
-                <p className="hero_tag text-violet_gradient text-7xl">Build Immersive Web Experiences</p>
+                <p className="hero_tag text-violet_gradient text-7xl">{t.tagline}</p>
             </div>
             <div className="w-full h-full absolute inset-0">
                 <Canvas className="w-full h-full">
@@ -76,7 +80,7 @@ const Hero = () => {
             </div>
             <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
                 <a href="#about" className="w-fit">
-                    <Button name="Let's work together" isBeam continerClass="sm:w-fit w-full sm:min-w-96"></Button>
+                    <Button name={t.cta} isBeam continerClass="sm:w-fit w-full sm:min-w-96"></Button>
                 </a>
             </div>
         </section>

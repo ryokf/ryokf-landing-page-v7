@@ -4,8 +4,12 @@ import { Canvas } from "@react-three/fiber"
 import { Center, OrbitControls } from '@react-three/drei';
 import CanvasLoader from "../components/CanvasLoader";
 import Laptop from "../components/Laptop";
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Projects = () => {
+    const { language } = useLanguage();
+    const t = translations[language].projects;
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0)
     const currentProject = myProjects[selectedProjectIndex]
 
@@ -22,7 +26,7 @@ const Projects = () => {
 
     return (
         <section className='c-space my-20 max-w-7xl m-auto'>
-            <p className='head-text'>My Work</p>
+            <p className='head-text'>{t.title}</p>
             <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
                 <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
                     <div className="absolute top-0 right-0">
@@ -47,7 +51,7 @@ const Projects = () => {
                             }
                         </div>
                         <a href={currentProject.href} target="_blank" rel="noreferrer" className="flex items-center gap-2 cursor-pointer text-white-600">
-                            <p>Check live site</p>
+                            <p>{t.checkLive}</p>
                             <img src="/assets/arrow-up.png" className="w-3 h-3" alt="external link icon" />
                         </a>
                     </div>
