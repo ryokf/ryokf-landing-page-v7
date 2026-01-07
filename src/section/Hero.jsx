@@ -47,8 +47,8 @@ const Hero = () => {
                         {
                             isMobile &&
                             <group>
-                                <ambientLight intensity={0.5} />  
-                                <directionalLight position={[5, 5, 5]} intensity={3} color={'#a78bfa'} /> 
+                                <ambientLight intensity={0.5} />
+                                <directionalLight position={[5, 5, 5]} intensity={3} color={'#a78bfa'} />
                                 <LaptopHero
                                     position={[0, -5.5, 0]}
                                     scale={1.5}
@@ -71,7 +71,6 @@ const Hero = () => {
                             </group>
                         }
                         <ambientLight intensity={0.4}></ambientLight>
-                        {/* <directionalLight position={[10, 10, 10]} intensity={0.5} color={'blue'}></directionalLight> */}
                     </Suspense>
                 </Canvas>
             </div>

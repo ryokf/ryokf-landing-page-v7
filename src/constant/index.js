@@ -11,50 +11,27 @@ export const navLinks = [
     },
     {
         id: 3,
+        name: 'Services',
+        href: '#services',
+    },
+    {
+        id: 4,
         name: 'Work',
         href: '#work',
     },
     {
-        id: 4,
+        id: 5,
+        name: 'Reviews',
+        href: '#reviews',
+    },
+    {
+        id: 6,
         name: 'Contact',
         href: '#contact',
     },
 ];
 
-export const clientReviews = [
-    {
-        id: 1,
-        name: 'Emily Johnson',
-        position: 'Marketing Director at GreenLeaf',
-        img: 'assets/review1.png',
-        review:
-            'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
-    },
-    {
-        id: 2,
-        name: 'Mark Rogers',
-        position: 'Founder of TechGear Shop',
-        img: 'assets/review2.png',
-        review:
-            'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
-    },
-    {
-        id: 3,
-        name: 'John Dohsas',
-        position: 'Project Manager at UrbanTech ',
-        img: 'assets/review3.png',
-        review:
-            'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
-    },
-    {
-        id: 4,
-        name: 'Ether Smith',
-        position: 'CEO of BrightStar Enterprises',
-        img: 'assets/review4.png',
-        review:
-            'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
-    },
-];
+
 
 export const myProjects = [
     {
@@ -417,5 +394,74 @@ export const workExperiences = [
         title: "As part of the Mobile Division, I learned and improved my skills in mobile development using Flutter, while also developing soft skills such as communication and teamwork.",
         icon: '/assets/logo2.png',
         animation: 'victory',
+    },
+];
+export const services = [
+    {
+        id: 1,
+        title: 'Web Development',
+        description: 'Building modern, responsive websites and web applications using the latest technologies like React, Next.js, and Laravel.',
+        icon: '🌐',
+    },
+    {
+        id: 2,
+        title: 'Mobile Development',
+        description: 'Creating cross-platform mobile applications with Flutter, delivering seamless experiences on iOS and Android.',
+        icon: '📱',
+    },
+    {
+        id: 3,
+        title: 'UI/UX Design',
+        description: 'Designing intuitive and beautiful user interfaces that provide excellent user experiences and drive engagement.',
+        icon: '🎨',
+    },
+    {
+        id: 4,
+        title: '3D Web Experiences',
+        description: 'Developing immersive 3D web experiences using Three.js and WebGL to create engaging interactive content.',
+        icon: '🎮',
+    },
+    {
+        id: 5,
+        title: 'API Development',
+        description: 'Building robust and scalable RESTful APIs with proper authentication, documentation, and best practices.',
+        icon: '⚡',
+    },
+    {
+        id: 6,
+        title: 'Performance Optimization',
+        description: 'Optimizing web applications for speed and performance, including WebAssembly integration and code splitting.',
+        icon: '🚀',
+    },
+];
+
+export const clientReviews = [
+    {
+        id: 1,
+        name: 'Sarah Johnson',
+        position: 'Product Manager at TechStart',
+        img: 'assets/review1.png',
+        review: 'Working with Ryo was an absolute pleasure. He delivered a stunning website that exceeded our expectations. His attention to detail and technical expertise are outstanding.',
+    },
+    {
+        id: 2,
+        name: 'Michael Chen',
+        position: 'CEO at InnovateLabs',
+        img: 'assets/review2.png',
+        review: 'Ryo built our mobile app from scratch and it turned out amazing. His professionalism and ability to understand our vision made the entire process smooth and efficient.',
+    },
+    {
+        id: 3,
+        name: 'Amanda Rodriguez',
+        position: 'Founder of DesignHub',
+        img: 'assets/review3.png',
+        review: 'The 3D web experience Ryo created for our portfolio site is incredible. It really sets us apart from competitors and our clients love it!',
+    },
+    {
+        id: 4,
+        name: 'David Park',
+        position: 'CTO at DataFlow',
+        img: 'assets/review4.png',
+        review: "Ryo's expertise in both frontend and backend development is impressive. He delivered a robust, scalable solution that handles our growing user base perfectly.",
     },
 ];

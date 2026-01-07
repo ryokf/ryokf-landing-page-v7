@@ -6,7 +6,6 @@ import CanvasLoader from '../components/CanvasLoader';
 import Developer from '../components/Developer';
 
 const Experience = () => {
-    // const [animationName, setAnimationName] = useState('');
     return (
         <section className='c-space my-20 max-w-7xl mx-auto'>
             <div className="w-full text-white-600">
