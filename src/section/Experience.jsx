@@ -12,13 +12,13 @@ const Experience = () => {
             <div className="w-full text-white-600">
                 <h3 className='head-text'>My Experience</h3>
                 <div className="work-container">
-                    <div className="work-canvas">
+                    <div className="work-canvas hidden lg:block">
                         <Canvas>
                             <ambientLight intensity={5} />
-                            <spotLight position={[10,10,10]} angle={0.15} intensity={1} penumbra={1} />
+                            <spotLight position={[10, 10, 10]} angle={0.15} intensity={1} penumbra={1} />
                             <directionalLight position={[10, 10, 10]} intensity={2} />
                             <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2}></OrbitControls>
-                            <Suspense fallback={<CanvasLoader/>}>
+                            <Suspense fallback={<CanvasLoader />}>
                                 <Developer scale={3} position={[0, -3, 0]}></Developer>
                             </Suspense>
                         </Canvas>
