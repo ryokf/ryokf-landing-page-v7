@@ -438,30 +438,16 @@ export const services = [
 export const clientReviews = [
     {
         id: 1,
-        name: 'Sarah Johnson',
-        position: 'Product Manager at TechStart',
+        name: 'Indah Puspitasari',
+        position: 'Founder of Olvad',
         img: 'assets/review1.png',
         review: 'Working with Ryo was an absolute pleasure. He delivered a stunning website that exceeded our expectations. His attention to detail and technical expertise are outstanding.',
     },
     {
         id: 2,
-        name: 'Michael Chen',
-        position: 'CEO at InnovateLabs',
+        name: 'Bapak Agus',
+        position: 'Administrator of Masjid An-nuur Pucang Gading',
         img: 'assets/review2.png',
         review: 'Ryo built our mobile app from scratch and it turned out amazing. His professionalism and ability to understand our vision made the entire process smooth and efficient.',
-    },
-    {
-        id: 3,
-        name: 'Amanda Rodriguez',
-        position: 'Founder of DesignHub',
-        img: 'assets/review3.png',
-        review: 'The 3D web experience Ryo created for our portfolio site is incredible. It really sets us apart from competitors and our clients love it!',
-    },
-    {
-        id: 4,
-        name: 'David Park',
-        position: 'CTO at DataFlow',
-        img: 'assets/review4.png',
-        review: "Ryo's expertise in both frontend and backend development is impressive. He delivered a robust, scalable solution that handles our growing user base perfectly.",
     },
 ];

@@ -64,7 +64,7 @@ const About = () => {
                         <div>
                             <p className="grid-headtext">My Current Focus</p>
                             <p className="grid-subtext">
-                                I’m currently focused on creating immersive web experiences using 3D technologies like Three.js to boost user engagement. In addition, I’m exploring WebAssembly as part of my research project to push the boundaries of performance on the web.
+                                I’m focused on creating immersive web experiences using 3D technologies and WebAssembly. Currently, I act as a strategic partner for businesses needing custom solutions, and I am also open to full-time Software Engineer opportunities.
                             </p>
                         </div>
                     </div>
