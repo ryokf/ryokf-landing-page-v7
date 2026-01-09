@@ -12,7 +12,7 @@ const Experience = () => {
     const t = translations[language].experience;
     return (
         <section className='c-space my-20 max-w-7xl mx-auto'>
-            <div className="w-full text-white-600">
+            <div className="w-full text-gray-700 dark:text-white-600 transition-colors">
                 <h3 className='head-text'>{t.title}</h3>
                 <div className="work-container">
                     <div className="work-canvas hidden lg:block">
@@ -39,9 +39,9 @@ const Experience = () => {
                                                 <div className="work-content_bar"></div>
                                             </div>
                                             <div className="sm:p-5 px-2.5 py-5">
-                                                <p className='!font-bold text-white-600'>{name}</p>
-                                                <p className='text-sm mb-5'>{pos} -- {duration}</p>
-                                                <p className='group-hover:text-white transition ease-in-out duration-500'>{title}</p>
+                                                <p className='!font-bold text-gray-700 dark:text-white-600 transition-colors'>{name}</p>
+                                                <p className='text-sm mb-5 text-gray-600 dark:text-gray-400 transition-colors'>{pos} -- {duration}</p>
+                                                <p className='text-gray-700 dark:text-white group-hover:text-gray-900 dark:group-hover:text-white transition ease-in-out duration-500'>{title}</p>
                                             </div>
                                         </div>
                                     )

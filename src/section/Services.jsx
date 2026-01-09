@@ -27,7 +27,7 @@ const ServiceCard = ({ service }) => {
 
     return (
         <div
-            className="group relative p-8 rounded-2xl bg-black-200 border border-black-300 hover:border-violet-500 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/20"
+            className="group relative p-8 rounded-2xl bg-gray-100 dark:bg-black-200 border border-gray-200 dark:border-black-300 hover:border-violet-500 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/20"
             style={{
                 transform: transform,
                 transition: 'transform 0.1s ease-out, border-color 0.3s, box-shadow 0.3s',
@@ -42,11 +42,11 @@ const ServiceCard = ({ service }) => {
                     {service.icon}
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-violet-400 transition-colors">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                     {service.title}
                 </h3>
 
-                <p className="text-white-600 leading-relaxed">
+                <p className="text-gray-700 dark:text-white-600 leading-relaxed transition-colors">
                     {service.description}
                 </p>
             </div>
@@ -71,7 +71,7 @@ const Services = () => {
         <section className="c-space my-20 max-w-7xl mx-auto" id="services">
             <div className="w-full">
                 <h2 className="head-text">{t.title}</h2>
-                <p className="text-white-600 mt-3 text-lg">
+                <p className="text-gray-700 dark:text-white-600 mt-3 text-lg transition-colors">
                     {t.subtitle}
                 </p>
             </div>

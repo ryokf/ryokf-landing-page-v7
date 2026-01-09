@@ -78,14 +78,14 @@ const Contact = () => {
     }
 
     return (
-        <div className="bg-gradient-to-t from-violet-800">
+        <div className="bg-gradient-to-t from-violet-700 dark:from-violet-900">
             <Toaster />
             <section className="c-space py-20 max-w-7xl mx-auto" id="contact">
                 <div className="relative min-h-screen flex items-center justify-center flex-col">
-                    <img src="assets/terminal.png" alt="terminal background" className="absolute inset-0 min-h-screen" />
+                    <img src="assets/terminal.png" alt="terminal background" className="absolute inset-0 min-h-screen opacity-20 dark:opacity-100" />
                     <div className="contact-container">
                         <h3 className="head-text">{t.title}</h3>
-                        <p className="text-lg text-white-600 mt-3">{t.subtitle}</p>
+                        <p className="text-lg text-gray-700 dark:text-white-600 mt-3 transition-colors">{t.subtitle}</p>
                         <form action="" ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
                             <label className="space-y-3">
                                 <span className="field-label">{t.fullName}</span>

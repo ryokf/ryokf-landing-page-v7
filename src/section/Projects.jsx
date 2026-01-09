@@ -28,29 +28,29 @@ const Projects = () => {
         <section className='c-space my-20 max-w-7xl m-auto'>
             <p className='head-text'>{t.title}</p>
             <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-                <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
+                <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-gray-300/50 dark:shadow-black-200 rounded-lg bg-gray-50/50 dark:bg-black-200/50 transition-colors border border-gray-200 dark:border-black-300">
                     <div className="absolute top-0 right-0">
                         <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-xl" />
                     </div>
                     <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg" style={currentProject.logoStyle}>
                         <img src={currentProject.logo} alt={`${ currentProject.title } logo`} className="w-10 h-10 shadow-sm" />
                     </div>
-                    <div className="flex flex-col gap-5 text-white-600 my-5">
-                        <p className="text-white text-2xl font-semibold animatedText">{currentProject.title}</p>
-                        <p className="animatedText">{currentProject.desc}</p>
-                        <p>{currentProject.subdesc}</p>
+                    <div className="flex flex-col gap-5 text-gray-700 dark:text-white-600 my-5 transition-colors">
+                        <p className="text-gray-900 dark:text-white text-2xl font-semibold animatedText">{currentProject.title}</p>
+                        <p className="animatedText text-gray-700 dark:text-white-600">{currentProject.desc}</p>
+                        <p className="text-gray-600 dark:text-white-600">{currentProject.subdesc}</p>
                     </div>
                     <div className="flex items-center justify-between flex-wrap gap-5">
                         <div className="flex items-center gap-3">
                             {
                                 currentProject.tags.map((tag) => (
-                                    <div key={tag.id} className="tech-logo text-white">
-                                        <img src={tag.path} alt={tag.name} className="text-white" />
+                                    <div key={tag.id} className="tech-logo text-gray-900 dark:text-white transition-colors">
+                                        <img src={tag.path} alt={tag.name} className="text-gray-900 dark:text-white" />
                                     </div>
                                 ))
                             }
                         </div>
-                        <a href={currentProject.href} target="_blank" rel="noreferrer" className="flex items-center gap-2 cursor-pointer text-white-600">
+                        <a href={currentProject.href} target="_blank" rel="noreferrer" className="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-white-600 hover:text-gray-900 dark:hover:text-white transition-colors">
                             <p>{t.checkLive}</p>
                             <img src="/assets/arrow-up.png" className="w-3 h-3" alt="external link icon" />
                         </a>
@@ -64,7 +64,7 @@ const Projects = () => {
                         </button>
                     </div>
                 </div>
-                <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+                <div className="border border-gray-200 dark:border-black-300 bg-gray-100 dark:bg-black-200 rounded-lg h-96 md:h-full transition-colors">
                     <Canvas camera={{ position: [0, 1, 7], fov: 50 }}>
                         <ambientLight intensity={1} />
                         <directionalLight position={[8, 8, 4]} intensity={2} />

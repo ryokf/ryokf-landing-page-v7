@@ -8,10 +8,18 @@
   scroll-behavior: smooth;
 }
 
-/* body {
-  font-family: "General Sans", sans-serif;
-  @apply bg-white dark:bg-black-100 text-black dark:text-white transition-colors duration-300;
-} */
+/* Light mode base styles */
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-white dark:bg-black-100 text-gray-900 dark:text-white transition-colors duration-300;
+}
 
 @layer utilities {
   .c-space {
@@ -23,7 +31,7 @@
   }
 
   .navbar-header {
-    @apply bg-white/5 dark:bg-black/5;
+    @apply bg-gray-100/40 dark:bg-black/5;
   }
 
   .nav-ul {
@@ -31,32 +39,32 @@
   }
 
   .nav-li {
-    @apply text-neutral-700 dark:text-neutral-200 hover:text-black dark:hover:text-white font-generalsans max-sm:hover:bg-neutral-200 max-sm:dark:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5 transition-colors;
+    @apply text-gray-700 dark:text-neutral-200 hover:text-gray-900 dark:hover:text-white font-generalsans max-sm:hover:bg-gray-200 max-sm:dark:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5 transition-colors;
   }
 
   .nav-li_a {
-    @apply text-lg md:text-base hover:text-black dark:hover:text-white transition-colors;
+    @apply text-lg md:text-base hover:text-gray-900 dark:hover:text-white transition-colors;
   }
 
   .nav-sidebar {
-    @apply absolute left-0 right-0 bg-white/90 dark:bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
+    @apply absolute left-0 right-0 bg-white/95 dark:bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block shadow-lg dark:shadow-black;
   }
 
   .text-gray_gradient {
-    @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% dark:from-[#BEC1CF] dark:from-60% dark:via-[#D5D8EA] dark:via-60% dark:to-[#D5D8EA] dark:to-100% bg-clip-text text-transparent;
   }
 
   .text-violet_gradient {
-    @apply bg-gradient-to-r from-indigo-400 to-indigo-100 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-indigo-500 to-indigo-300 dark:from-indigo-400 dark:to-indigo-100 bg-clip-text text-transparent;
   }
 
   .text-blue_gradient {
-    @apply bg-gradient-to-r from-blue-600 to-blue-300 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-700 to-blue-400 dark:from-blue-600 dark:to-blue-300 bg-clip-text text-transparent;
   }
 
   /* button component */
   .btn {
-    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-slate-200/80 dark:bg-black-300  transition-all active:scale-95 text-slate-800 dark:text-white mx-auto;
+    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-gray-200 dark:bg-black-300 hover:bg-gray-300 dark:hover:bg-black-300 transition-all active:scale-95 text-gray-900 dark:text-white mx-auto;
   }
 
   .btn-ping {
@@ -64,25 +72,25 @@
   }
 
   .btn-ping_dot {
-    @apply relative inline-flex rounded-full h-3 w-3 bg-blue-400 dark:bg-violet-400;
+    @apply relative inline-flex rounded-full h-3 w-3 bg-blue-500 dark:bg-violet-400;
   }
 
   /* hero section */
   .hero_tag {
-    @apply text-center xl:!text-6xl md:!text-5xl sm:!text-6xl !text-5xl font-generalsans font-black !leading-normal;
+    @apply text-center xl:!text-6xl md:!text-5xl sm:!text-6xl !text-5xl font-generalsans font-black !leading-normal text-gray-900 dark:text-white;
   }
 
   /* about section */
   .grid-container {
-    @apply w-full h-full border border-slate-100 bg-slate-200/20 dark:border-black-300 dark:bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5;
+    @apply w-full h-full border border-gray-200 bg-gray-50/50 dark:border-black-300 dark:bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-colors;
   }
 
   .grid-headtext {
-    @apply text-xl font-semibold mb-2 text-slate-800 dark:text-white font-generalsans;
+    @apply text-xl font-semibold mb-2 text-gray-900 dark:text-white font-generalsans transition-colors;
   }
 
   .grid-subtext {
-    @apply text-[#afb0b6] text-base font-generalsans;
+    @apply text-gray-600 dark:text-[#afb0b6] text-base font-generalsans transition-colors;
   }
 
   .copy-container {
@@ -95,7 +103,7 @@
   }
 
   .tech-logo {
-    @apply w-10 h-10 rounded-md p-2 bg-neutral-100 bg-opacity-10 backdrop-filter backdrop-blur-lg flex justify-center items-center;
+    @apply w-10 h-10 rounded-md p-2 bg-gray-200 dark:bg-neutral-100 dark:bg-opacity-10 backdrop-filter backdrop-blur-lg flex justify-center items-center transition-colors;
   }
 
   /* clients section */
@@ -104,7 +112,7 @@
   }
 
   .client-review {
-    @apply rounded-lg md:p-10 p-5 col-span-1 bg-black-300 bg-opacity-50;
+    @apply rounded-lg md:p-10 p-5 col-span-1 bg-gray-100/50 dark:bg-black-300 dark:bg-opacity-50 transition-colors border border-gray-200 dark:border-transparent;
   }
 
   .client-content {
@@ -117,23 +125,23 @@
   }
 
   .work-canvas {
-    @apply col-span-1 rounded-lg bg-black-200 border border-black-300;
+    @apply col-span-1 rounded-lg bg-gray-100 dark:bg-black-200 border border-gray-200 dark:border-black-300 transition-colors;
   }
 
   .work-content {
-    @apply col-span-2 rounded-lg bg-black-200 border border-black-300;
+    @apply col-span-2 rounded-lg bg-gray-100 dark:bg-black-200 border border-gray-200 dark:border-black-300 transition-colors;
   }
 
   .work-content_container {
-    @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-300 rounded-lg sm:px-5 px-2.5;
+    @apply grid grid-cols-[auto_1fr] items-start gap-5 transition-all ease-in-out duration-500 cursor-pointer hover:bg-gray-200 dark:hover:bg-black-300 rounded-lg sm:px-5 px-2.5;
   }
 
   .work-content_logo {
-    @apply rounded-3xl w-24 h-16 p-2 bg-black-600  object-cover;
+    @apply rounded-3xl w-24 h-16 p-2 bg-gray-300 dark:bg-black-600 object-cover transition-colors;
   }
 
   .work-content_bar {
-    @apply flex-1 w-0.5 mt-4 h-full bg-black-300 group-hover:bg-black-500 group-last:hidden;
+    @apply flex-1 w-0.5 mt-4 h-full bg-gray-300 dark:bg-black-300 group-hover:bg-gray-400 dark:group-hover:bg-black-500 group-last:hidden transition-colors;
   }
 
   /* contact section */
@@ -142,15 +150,15 @@
   }
 
   .field-label {
-    @apply text-lg text-white-600;
+    @apply text-lg text-gray-700 dark:text-white-600 transition-colors;
   }
 
   .field-input {
-    @apply w-full bg-black-300 px-5 py-2 min-h-14 rounded-lg placeholder:text-white-500 text-lg text-white-800 shadow-black-200 shadow-2xl focus:outline-none;
+    @apply w-full bg-gray-100 dark:bg-black-300 px-5 py-2 min-h-14 rounded-lg placeholder:text-gray-500 dark:placeholder:text-white-500 text-lg text-gray-900 dark:text-white-800 shadow-gray-300/50 dark:shadow-black-200 shadow-2xl focus:outline-none border border-gray-200 dark:border-transparent transition-colors;
   }
 
   .field-btn {
-    @apply bg-black-500 px-5 py-2 min-h-12 rounded-lg shadow-black-200 shadow-2xl flex justify-center items-center text-lg text-white gap-3;
+    @apply bg-gray-900 dark:bg-black-500 hover:bg-gray-800 dark:hover:bg-black-600 px-5 py-2 min-h-12 rounded-lg shadow-gray-300/50 dark:shadow-black-200 shadow-2xl flex justify-center items-center text-lg text-white gap-3 transition-all;
   }
 
   .field-btn_arrow {
@@ -159,7 +167,7 @@
 
   /*  footer */
   .social-icon {
-    @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200;
+    @apply w-12 h-12 rounded-full flex justify-center items-center bg-gray-200 dark:bg-black-300 border border-gray-300 dark:border-black-200 transition-colors hover:bg-gray-300 dark:hover:bg-black-500;
   }
 }
 
