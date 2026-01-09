@@ -10,7 +10,7 @@ import Reviews from './section/Reviews';
 
 const App = () => {
   return (
-    <main className='max-w-full mx-auto'>
+    <main className='max-w-full mx-auto bg-white dark:bg-black transition-colors duration-300'>
       <Navbar></Navbar>
       <Hero></Hero>
       <About></About>

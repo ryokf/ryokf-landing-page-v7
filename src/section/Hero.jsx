@@ -25,15 +25,15 @@ const Hero = () => {
     const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
     return (
-        <section className="min-h-screen w-full flex flex-col relative bg-gradient-to-b from-violet-900 to-transparent" id="home">
+        <section className="min-h-screen w-full flex flex-col relative bg-gradient-to-b from-blue-200 dark:from-violet-900 to-transparent" id="home">
             <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-                <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
+                <p className="sm:text-3xl text-xl font-medium text-slate-800 dark:text-white text-center font-generalsans">
                     <span>
                         {t.greeting}
                     </span>
                     <span className="waving-hand"> 👋 </span>
                 </p>
-                <p className="hero_tag text-violet_gradient text-7xl">{t.tagline}</p>
+                <p className="hero_tag text-blue_gradient dark:text-violet_gradient text-7xl">{t.tagline}</p>
             </div>
             <div className="w-full h-full absolute inset-0">
                 <Canvas className="w-full h-full">

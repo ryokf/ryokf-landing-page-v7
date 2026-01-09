@@ -1,7 +1,9 @@
 import { useState } from "react"
+import PropTypes from "prop-types"
 import { useLanguage } from "../context/LanguageContext"
 import { translations } from "../translations/translations"
 import LanguageSwitcher from "../components/LanguageSwitcher"
+import ThemeToggle from "../components/ThemeToggle"
 
 const NavItems = ({ onClick = () => { }, language }) => {
     const t = translations[language].nav;
@@ -28,6 +30,11 @@ const NavItems = ({ onClick = () => { }, language }) => {
     )
 }
 
+NavItems.propTypes = {
+    onClick: PropTypes.func,
+    language: PropTypes.string.isRequired,
+}
+
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const { language } = useLanguage()
@@ -41,12 +48,13 @@ const Navbar = () => {
     }
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 w-full bg-black/5 backdrop-blur-md ">
+        <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white/5 dark:bg-black/5 backdrop-blur-md ">
             <div className="max-w-7xl mx-auto">
                 <div className="flex items-center justify-between py-5 mx-auto c-space">
-                    <a href="/" className="text-neutral-200 font-bold text-xl hover:text-white transition-colors">Ryokf</a>
+                    <a href="/" className="text-slate-800 dark:text-neutral-200 font-bold text-xl hover:text-white transition-colors">Ryokf</a>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3">
+                        <ThemeToggle />
                         <LanguageSwitcher />
                         <button onClick={toggleMenu} className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex" aria-label="Toggle menu">
                             <img src={isMenuOpen ? "/assets/close.svg" : "/assets/menu.svg"} alt="toggle" className="w-6 h-6" />
