@@ -32,7 +32,7 @@ const Projects = () => {
                     <div className="absolute top-0 right-0">
                         <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-xl" />
                     </div>
-                    <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg" style={currentProject.logoStyle}>
+                    <div className="p-3 w-fit rounded-lg" style={currentProject.logoStyle}>
                         <img src={currentProject.logo} alt={`${ currentProject.title } logo`} className="w-10 h-10 shadow-sm" />
                     </div>
                     <div className="flex flex-col gap-5 text-gray-700 dark:text-white-600 my-5 transition-colors">
@@ -57,14 +57,14 @@ const Projects = () => {
                     </div>
                     <div className="flex justify-between items-center mt-7">
                         <button className="arrow-btn" onClick={() => handleNavigation('previous')} aria-label="Previous project">
-                            <img src="/assets/left-arrow.png" alt="left arrow" className="w-4 h-4" />
+                            <img src="/assets/left-arrow.png" alt="left arrow" className="w-4 h-4 invert dark:invert-0" />
                         </button>
                         <button className="arrow-btn" onClick={() => handleNavigation('next')} aria-label="Next project">
-                            <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
+                            <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4 invert dark:invert-0" />
                         </button>
                     </div>
                 </div>
-                <div className="border border-gray-200 dark:border-black-300 bg-gray-100 dark:bg-black-200 rounded-lg h-96 md:h-full transition-colors">
+                <div className="border border-gray-200 dark:border-black-300 bg-gray-50/50 dark:bg-black-200 rounded-lg h-96 md:h-full transition-colors">
                     <Canvas camera={{ position: [0, 1, 7], fov: 50 }}>
                         <ambientLight intensity={1} />
                         <directionalLight position={[8, 8, 4]} intensity={2} />

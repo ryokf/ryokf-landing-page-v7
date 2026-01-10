@@ -22,7 +22,7 @@ const About = () => {
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container bg-gray-100/50 dark:bg-black">
-                        
+
                         <img src="assets/photo-profile.JPG" alt="Ryo Khrisna Fitriawan" className="w-full sm:h-[276px] h-fit object-cover rounded-lg overflow-hidden" />
                         <div>
                             <p className="grid-headtext">{t.title}</p>
@@ -47,7 +47,7 @@ const About = () => {
 
                 <div className="col-span-1 xl:row-span-4">
                     <div className="grid-container">
-                        <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center overflow-hidden opacity-70">
+                        <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center overflow-hidden dark:opacity-70">
                             <img src="assets/writing-article.jpg" alt="Writing programming articles and blog posts" />
                         </div>
                         <div>

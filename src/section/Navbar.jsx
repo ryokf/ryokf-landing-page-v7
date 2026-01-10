@@ -48,12 +48,12 @@ const Navbar = () => {
     }
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white/50 dark:bg-black/5 backdrop-blur-md border-b border-gray-200/50 dark:border-black-300/30 transition-colors">
+        <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white/5 dark:bg-black/5 backdrop-blur-md transition-colors">
             <div className="max-w-7xl mx-auto">
                 <div className="flex items-center justify-between py-5 mx-auto c-space">
                     <a href="/" className="text-gray-900 dark:text-neutral-200 font-bold text-xl hover:text-gray-700 dark:hover:text-white transition-colors">Ryokf</a>
 
-                    <div className="flex items-center gap-3">
+                    <div className="items-center gap-3 sm:hidden flex">
                         <ThemeToggle />
                         <LanguageSwitcher />
                         <button onClick={toggleMenu} className="text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white focus:outline-none sm:hidden flex transition-colors" aria-label="Toggle menu">
@@ -63,6 +63,8 @@ const Navbar = () => {
 
                     <nav className="sm:flex hidden">
                         <NavItems language={language} />
+                        <ThemeToggle />
+                        <LanguageSwitcher />
                     </nav>
                 </div>
             </div>

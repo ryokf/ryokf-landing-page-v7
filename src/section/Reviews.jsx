@@ -33,12 +33,12 @@ const Reviews = () => {
             <div className="mt-12 max-w-4xl mx-auto">
                 <div className="relative bg-gray-100 dark:bg-black-200 border border-gray-200 dark:border-black-300 rounded-2xl p-8 md:p-12 transition-colors">
                     {/* Gradient Background */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-transparent rounded-2xl" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 dark:from-violet-500/10 to-transparent rounded-2xl" />
 
                     {/* Content */}
                     <div className="relative z-10">
                         {/* Quote Icon */}
-                        <div className="text-6xl text-violet-500 mb-6">&ldquo;</div>
+                        <div className="text-6xl text-blue-600 dark:text-violet-500 mb-6">&ldquo;</div>
 
                         {/* Review Text */}
                         <p className="text-gray-800 dark:text-white-800 text-lg md:text-xl leading-relaxed mb-8 min-h-[120px] transition-colors">
@@ -50,7 +50,7 @@ const Reviews = () => {
                             <img
                                 src={currentReview.img}
                                 alt={currentReview.name}
-                                className="w-16 h-16 rounded-full object-cover border-2 border-violet-500"
+                                className="w-16 h-16 rounded-full object-cover border-2 border-blue-600 dark:border-violet-500"
                             />
                             <div>
                                 <h4 className="text-gray-900 dark:text-white font-bold text-lg transition-colors">{currentReview.name}</h4>
@@ -79,7 +79,7 @@ const Reviews = () => {
                                         key={index}
                                         onClick={() => setCurrentIndex(index)}
                                         className={`w-3 h-3 rounded-full transition-all duration-300 ${ index === currentIndex
-                                            ? 'bg-violet-500 w-8'
+                                            ? 'bg-blue-600 dark:bg-violet-500 w-8'
                                             : 'bg-gray-400 dark:bg-white-600 hover:bg-gray-600 dark:hover:bg-white-800'
                                             }`}
                                         aria-label={`Go to review ${ index + 1 }`}

@@ -20,7 +20,7 @@ export const translations = {
         // About Section
         about: {
             title: "Hi, I'm Ryo Khrisna Fitriawan",
-            description: "With 3 years of journey, I have honed my skills in frontend web development and UI/UX design to create immersive and user-friendly experience.",
+            description: `With ${ new Date().getFullYear() - 2021 } years of journey, I have honed my skills in frontend web development and UI/UX design to create immersive and user-friendly experience.`,
             techStack: "Tech Stack",
             techStackDesc: "I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable applications",
             writingTitle: "I love writing articles about programming & tech",
@@ -116,7 +116,7 @@ export const translations = {
         // About Section
         about: {
             title: "Halo, Saya Ryo Khrisna Fitriawan",
-            description: "Dengan perjalanan 3 tahun, saya telah mengasah keterampilan dalam pengembangan web frontend dan desain UI/UX untuk menciptakan pengalaman yang imersif dan ramah pengguna.",
+            description: `Dengan perjalanan ${ new Date().getFullYear() - 2021 } tahun, saya telah mengasah keterampilan dalam pengembangan web frontend dan desain UI/UX untuk menciptakan pengalaman yang imersif dan ramah pengguna.`,
             techStack: "Teknologi",
             techStackDesc: "Saya ahli dalam berbagai bahasa pemrograman, framework, dan tools yang memungkinkan saya membangun aplikasi yang robust dan scalable",
             writingTitle: "Saya suka menulis artikel tentang programming & teknologi",

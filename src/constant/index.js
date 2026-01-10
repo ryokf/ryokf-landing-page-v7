@@ -43,8 +43,8 @@ export const myProjects = [
         logo: '/assets/project_logo/devlearn.png',
         logoStyle: {
             backgroundColor: '#1e3a8a',
-            border: '0.2px solid #000033',
-            boxShadow: '0px 0px 60px 0px #000033',
+            // border: '0.2px solid #000033',
+            boxShadow: '0px 0px 60px -10px #000033',
         },
         spotlight: '/assets/spotlight1.png',
         tags: [
@@ -69,8 +69,8 @@ export const myProjects = [
         logo: '/assets/wasm.png',
         logoStyle: {
             backgroundColor: 'oklch(67.3% 0.182 276.935)',
-            border: '0.2px solid #000033',
-            boxShadow: '0px 0px 60px 0px #000033',
+            // border: '0.2px solid #000033',
+            boxShadow: '0px 0px 60px -10px #000033',
         },
         spotlight: '/assets/spotlight1.png',
         tags: [
@@ -105,8 +105,8 @@ export const myProjects = [
         logo: '/assets/project_logo/inkura.webp',
         logoStyle: {
             backgroundColor: 'oklch(45.2% 0.211 324.591)',
-            border: '0.2px solid #000033',
-            boxShadow: '0px 0px 60px 0px #000033',
+            // border: '0.2px solid #000033',
+            boxShadow: '0px 0px 60px -10px #000033',
         },
         spotlight: '/assets/spotlight1.png',
         tags: [
@@ -137,8 +137,8 @@ export const myProjects = [
         logoStyle: {
             color: '#ffffff',
             backgroundColor: '#60a5fa',
-            border: '0.2px solid #17293E',
-            boxShadow: '0px 0px 60px 0px #2F6DB54D',
+            // border: '0.2px solid #17293E',
+            boxShadow: '0px 0px 60px -10px #2F6DB54D',
         },
         spotlight: '/assets/spotlight2.png',
         tags: [
@@ -173,8 +173,8 @@ export const myProjects = [
         logo: '/assets/project_logo/olvad.png',
         logoStyle: {
             backgroundColor: '#14b8a6',
-            border: '0.2px solid #238F60',
-            boxShadow: '0px 0px 60px 0px #238F604D',
+            // border: '0.2px solid #238F60',
+            boxShadow: '0px 0px 60px -10px #238F604D',
         },
         spotlight: '/assets/spotlight3.png',
         tags: [
@@ -209,8 +209,8 @@ export const myProjects = [
         logo: '/assets/project_logo/olvad.png',
         logoStyle: {
             backgroundColor: '#14b8a6',
-            border: '0.2px solid #238F60',
-            boxShadow: '0px 0px 60px 0px #238F604D',
+            // border: '0.2px solid #238F60',
+            boxShadow: '0px 0px 60px -10px #238F604D',
         },
         spotlight: '/assets/spotlight3.png',
         tags: [
@@ -240,8 +240,8 @@ export const myProjects = [
         logo: '/assets/project_logo/smart-pet.png',
         logoStyle: {
             backgroundColor: '#f59e0b',
-            border: '0.2px solid #0E2D58',
-            boxShadow: '0px 0px 60px 0px #2F67B64D',
+            // border: '0.2px solid #0E2D58',
+            boxShadow: '0px 0px 60px -10px #2F67B64D',
         },
         spotlight: '/assets/spotlight4.png',
         tags: [
@@ -271,8 +271,8 @@ export const myProjects = [
         logo: '/assets/project_logo/agenda-dinas.png',
         logoStyle: {
             backgroundColor: '#f59e0b',
-            border: '0.2px solid #0E2D58',
-            boxShadow: '0px 0px 60px 0px #2F67B64D',
+            // border: '0.2px solid #0E2D58',
+            boxShadow: '0px 0px 60px -10px #2F67B64D',
         },
         spotlight: '/assets/spotlight4.png',
         tags: [

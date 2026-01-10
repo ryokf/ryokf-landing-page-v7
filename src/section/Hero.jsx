@@ -25,7 +25,7 @@ const Hero = () => {
     const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
     return (
-        <section className="min-h-screen w-full flex flex-col relative bg-gradient-to-b from-blue-100 dark:from-violet-900 to-white dark:to-transparent" id="home">
+        <section className="min-h-screen w-full flex flex-col relative bg-gradient-to-b from-blue-200 dark:from-violet-900 to-white dark:to-transparent" id="home">
             <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
                 <p className="sm:text-3xl text-xl font-medium text-gray-800 dark:text-white text-center font-generalsans">
                     <span>

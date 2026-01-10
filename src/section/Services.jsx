@@ -27,7 +27,7 @@ const ServiceCard = ({ service }) => {
 
     return (
         <div
-            className="group relative p-8 rounded-2xl bg-gray-100 dark:bg-black-200 border border-gray-200 dark:border-black-300 hover:border-violet-500 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/20"
+            className="group relative p-8 rounded-2xl bg-gray-50/50 dark:bg-black-200 border border-gray-200 dark:border-black-300 hover:border-blue-500 dark:hover:border-violet-500 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 dark:hover:shadow-violet-500/20"
             style={{
                 transform: transform,
                 transition: 'transform 0.1s ease-out, border-color 0.3s, box-shadow 0.3s',
@@ -35,14 +35,14 @@ const ServiceCard = ({ service }) => {
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
-            <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 dark:from-violet-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
 
             <div className="relative z-10">
                 <div className="text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                 </div>
 
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-blue-700 dark:group-hover:text-violet-400 transition-colors">
                     {service.title}
                 </h3>
 

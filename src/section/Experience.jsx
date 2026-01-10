@@ -34,11 +34,11 @@ const Experience = () => {
                                         <div key={id} className="work-content_container group" >
                                             <div className="flex flex-col h-full justify-start items-start py-2 !pt-6">
                                                 <div className="work-content_logo">
-                                                    <img src={icon} className="object-cover max-h-16" alt={`${ name } company logo`} />
+                                                    <img src={icon} className="object-cover max-w-16 max-h-12" alt={`${ name } company logo`} />
                                                 </div>
                                                 <div className="work-content_bar"></div>
                                             </div>
-                                            <div className="sm:p-5 px-2.5 py-5">
+                                            <div className="sm:p-5 mx-2.5 py-5">
                                                 <p className='!font-bold text-gray-700 dark:text-white-600 transition-colors'>{name}</p>
                                                 <p className='text-sm mb-5 text-gray-600 dark:text-gray-400 transition-colors'>{pos} -- {duration}</p>
                                                 <p className='text-gray-700 dark:text-white group-hover:text-gray-900 dark:group-hover:text-white transition ease-in-out duration-500'>{title}</p>

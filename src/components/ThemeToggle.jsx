@@ -6,7 +6,7 @@ const ThemeToggle = () => {
     return (
         <button
             onClick={toggleTheme}
-            className="relative w-10 h-10 rounded-full bg-black/20 dark:bg-white/10 backdrop-blur-sm border border-neutral-700/30 dark:border-neutral-300/30 flex items-center justify-center hover:bg-black/30 dark:hover:bg-white/20 transition-all duration-300 active:scale-95"
+            className="relative sm:mx-5 w-10 h-10 rounded-full bg-black/20 dark:bg-white/10 backdrop-blur-sm border border-neutral-700/30 dark:border-neutral-300/30 flex items-center justify-center hover:bg-black/30 dark:hover:bg-white/20 transition-all duration-300 active:scale-95"
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
         >
             {/* Sun icon for light mode (shows when in dark mode) */}

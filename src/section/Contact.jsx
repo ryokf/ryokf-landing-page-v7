@@ -78,11 +78,11 @@ const Contact = () => {
     }
 
     return (
-        <div className="bg-gradient-to-t from-violet-700 dark:from-violet-900">
+        <div className="bg-gradient-to-t from-blue-500 dark:from-violet-700">
             <Toaster />
             <section className="c-space py-20 max-w-7xl mx-auto" id="contact">
                 <div className="relative min-h-screen flex items-center justify-center flex-col">
-                    <img src="assets/terminal.png" alt="terminal background" className="absolute inset-0 min-h-screen opacity-20 dark:opacity-100" />
+                    <img src="assets/terminal.png" alt="terminal background" className="absolute inset-0 min-h-screen opacity-80 invert dark:invert-0" />
                     <div className="contact-container">
                         <h3 className="head-text">{t.title}</h3>
                         <p className="text-lg text-gray-700 dark:text-white-600 mt-3 transition-colors">{t.subtitle}</p>
