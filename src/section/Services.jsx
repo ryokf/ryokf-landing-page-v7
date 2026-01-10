@@ -59,12 +59,12 @@ const Services = () => {
     const t = translations[language].services;
 
     const services = [
-        { id: 1, title: t.webDev.title, description: t.webDev.desc, icon: '🌐' },
-        { id: 2, title: t.mobileDev.title, description: t.mobileDev.desc, icon: '📱' },
-        { id: 3, title: t.uiux.title, description: t.uiux.desc, icon: '🎨' },
-        { id: 4, title: t.web3d.title, description: t.web3d.desc, icon: '🎮' },
-        { id: 5, title: t.api.title, description: t.api.desc, icon: '⚡' },
-        { id: 6, title: t.performance.title, description: t.performance.desc, icon: '🚀' },
+        { id: 1, title: t.service1.title, description: t.service1.desc, icon: '🛒' },
+        { id: 2, title: t.service2.title, description: t.service2.desc, icon: '🚀' },
+        { id: 3, title: t.service3.title, description: t.service3.desc, icon: '📱' },
+        { id: 4, title: t.service4.title, description: t.service4.desc, icon: '🤖' },
+        { id: 5, title: t.service5.title, description: t.service5.desc, icon: '⛓️' },
+        { id: 6, title: t.service6.title, description: t.service6.desc, icon: '💻' },
     ];
 
     return (

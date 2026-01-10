@@ -13,51 +13,55 @@ export const translations = {
         // Hero Section
         hero: {
             greeting: "Hi, I am Ryo Khrisna Fitriawan",
-            tagline: "Build Immersive Web Experiences",
-            cta: "Let's work together",
+            tagline: [
+                "POS Systems & E-Commerce Expert",
+                "Immersive 3D Web & Landing Pages",
+                "Mobile Apps & Smart Contracts Dev"
+            ],
+            cta: "Let's Discuss",
         },
 
         // About Section
         about: {
             title: "Hi, I'm Ryo Khrisna Fitriawan",
-            description: `With ${ new Date().getFullYear() - 2021 } years of journey, I have honed my skills in frontend web development and UI/UX design to create immersive and user-friendly experience.`,
+            description: `I'm a solution-focused developer bridging two worlds. On one side, I help local businesses automate operations through efficient POS Systems and E-Commerce platforms. On the other, I continuously innovate at the cutting edge of technology by building immersive 3D Web experiences and decentralized systems (Smart Contracts). Whatever scale your business is, I have the technology that fits.`,
             techStack: "Tech Stack",
             techStackDesc: "I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable applications",
             writingTitle: "I love writing articles about programming & tech",
             writingDesc: "In my spare time, I love spending time writing blog posts about programming and tech. It's my little space to share what I've learned, experiment with new ideas, and connect with others who are passionate about the same things. I hope you enjoy reading them as much as I enjoy writing them!",
             readArticle: "Read my article",
             currentFocus: "My Current Focus",
-            currentFocusDesc: "I'm focused on creating immersive web experiences using 3D technologies and WebAssembly. Currently, I act as a strategic partner for businesses needing custom solutions, and I am also open to full-time Software Engineer opportunities.",
+            currentFocusDesc: "I'm building solutions that matter: automating small business operations with POS systems, creating stunning digital presences with 3D web, and exploring the frontier of blockchain technology. I'm open to partnerships with businesses and startups seeking strategic technical guidance.",
             contactMe: "Contact me",
         },
 
         // Services Section
         services: {
             title: "My Services",
-            subtitle: "I offer a comprehensive range of development services to bring your ideas to life",
-            webDev: {
-                title: "Web Development",
-                desc: "Building modern, responsive websites and web applications using the latest technologies like React, Next.js, and Laravel.",
+            service1: {
+                title: "Landing Pages & 3D Web",
+                desc: "Stunning promotional pages with interactive 3D elements to elevate your brand presence and engagement.",
             },
-            mobileDev: {
-                title: "Mobile Development",
-                desc: "Creating cross-platform mobile applications with Flutter, delivering seamless experiences on iOS and Android.",
+            subtitle: "Complete Digital Solutions for Local Businesses and Tech Startups",
+            service2: {
+                title: "POS Systems & E-Commerce",
+                desc: "Integrated point-of-sale, inventory management, and online store solutions to streamline operations and expand market reach online.",
             },
-            uiux: {
-                title: "UI/UX Design",
-                desc: "Designing intuitive and beautiful user interfaces that provide excellent user experiences and drive engagement.",
+            service3: {
+                title: "Mobile Applications",
+                desc: "Fast and responsive Android & iOS apps using React Native for cross-platform reach.",
             },
-            web3d: {
-                title: "3D Web Experiences",
-                desc: "Developing immersive 3D web experiences using Three.js and WebGL to create engaging interactive content.",
+            service4: {
+                title: "AI Integration & Chatbots",
+                desc: "Smart conversational AI solutions integrated with WhatsApp, Telegram, and web platforms, powered by LLMs for 24/7 customer engagement.",
             },
-            api: {
-                title: "API Development",
-                desc: "Building robust and scalable RESTful APIs with proper authentication, documentation, and best practices.",
+            service5: {
+                title: "Blockchain & Smart Contracts",
+                desc: "Secure smart contract development for Web3 applications and decentralized solutions.",
             },
-            performance: {
-                title: "Performance Optimization",
-                desc: "Optimizing web applications for speed and performance, including WebAssembly integration and code splitting.",
+            service6: {
+                title: "Custom Web Applications",
+                desc: "Specialized business information systems designed for your company's unique workflow and needs.",
             },
         },
 
@@ -65,11 +69,68 @@ export const translations = {
         projects: {
             title: "My Work",
             checkLive: "Check live site",
+            list: [
+                {
+                    title: 'POS System for Bakery Shop',
+                    desc: 'A Point-of-Sale system tailored for bakery shops, providing features for inventory management, sales tracking, and operations optimization.',
+                    subdesc: 'Developed with Laravel 10 and ReactJS using Inertia.js, the system streamlines daily tasks and enhances customer service.',
+                },
+                {
+                    title: 'Olvad - E-Commerce for Bakery Shop',
+                    desc: 'Olvad is an e-commerce platform that allows users to browse and purchase bakery products with ease.',
+                    subdesc: 'Built using NextJS and Supabase, Olvad is designed to optimize online bakery sales and simplify the customer journey.',
+                },
+                {
+                    title: 'WebAssmebly and js Comparison Website (ongoing)',
+                    desc: 'This website was developed as part of a research project comparing the performance of WebAssembly and JavaScript in image processing tasks.',
+                    subdesc: 'Built with Rust and JavaScript, the platform provides a testbed to evaluate and contrast the execution efficiency of both technologies.',
+                },
+                {
+                    title: 'SmartPet - Pet Care App',
+                    desc: 'SmartPet is an IoT-enabled pet care solution featuring smart collar integration for activity tracking and automated feeding.',
+                    subdesc: 'Created with Laravel 10 and Arduino, SmartPet offers a complete ecosystem for monitoring and managing pet health.',
+                },
+                {
+                    title: 'LiniAksara - An International Platform For Original Works (ongoing)',
+                    desc: 'LiniAksara is a collaborative platform developed for a digital startup project, designed to showcase and manage original user-created works.',
+                    subdesc: 'Powered by NextJS and Supabase, LiniAksara delivers an intuitive interface and reliable backend for content management and collaboration.',
+                },
+            ],
         },
 
         // Experience Section
         experience: {
             title: "My Experience",
+            experiences: [
+                {
+                    id: 4,
+                    name: 'PT Telkomsel',
+                    pos: 'Software Engineer Intern',
+                    duration: '2025',
+                    title: "As a Software Engineer Intern, I learned and improved my skills in software development using Laravel, Node.js, and Unity, while also developing soft skills such as communication and teamwork.",
+                },
+                {
+                    id: 3,
+                    name: 'DISKOMINFO Kota Semarang',
+                    pos: 'Web Developer Intern',
+                    duration: '2025',
+                    title: "As a Web Developer Intern, I learned and improved my skills in web development using ReactJS and Supabase, while also developing soft skills such as communication and teamwork.",
+                },
+                {
+                    id: 2,
+                    name: 'Universitas Dian Nuswantoro',
+                    pos: 'Laboratory Assistant',
+                    duration: '2023 - 2024',
+                    title: "As a Laboratory Assistant, I helped students in the laboratory to learn and practice their skills in subjects such as Programming Algorithm, Database, Web Programming and more.",
+                },
+                {
+                    id: 1,
+                    name: 'DNCC',
+                    pos: 'Mobile Division',
+                    duration: '2022 - 2024',
+                    title: "As part of the Mobile Division, I learned and improved my skills in mobile development using Flutter, while also developing soft skills such as communication and teamwork.",
+                },
+            ],
         },
 
         // Reviews Section
@@ -109,51 +170,55 @@ export const translations = {
         // Hero Section
         hero: {
             greeting: "Halo, Saya Ryo Khrisna Fitriawan",
-            tagline: "Membangun Pengalaman Web yang Imersif",
-            cta: "Mari bekerja sama",
+            tagline: [
+                "Ahli Sistem POS & Toko Online",
+                "Spesialis Landing Page & Web 3D",
+                "Developer Mobile Apps & Blockchain"
+            ],
+            cta: "Konsultasi Proyek",
         },
 
         // About Section
         about: {
             title: "Halo, Saya Ryo Khrisna Fitriawan",
-            description: `Dengan perjalanan ${ new Date().getFullYear() - 2021 } tahun, saya telah mengasah keterampilan dalam pengembangan web frontend dan desain UI/UX untuk menciptakan pengalaman yang imersif dan ramah pengguna.`,
+            description: `Saya adalah pengembang yang fokus pada solusi. Di satu sisi, saya membantu bisnis lokal mengotomatisasi operasional melalui Sistem POS dan Toko Online yang efisien. Di sisi lain, saya terus berinovasi di garis depan teknologi dengan membangun Pengalaman Web 3D dan sistem terdesentralisasi (Smart Contracts). Apa pun skala bisnis Anda, saya punya teknologi yang tepat.`,
             techStack: "Teknologi",
             techStackDesc: "Saya ahli dalam berbagai bahasa pemrograman, framework, dan tools yang memungkinkan saya membangun aplikasi yang robust dan scalable",
             writingTitle: "Saya suka menulis artikel tentang programming & teknologi",
             writingDesc: "Di waktu luang, saya suka menulis blog tentang programming dan teknologi. Ini adalah ruang kecil saya untuk berbagi apa yang telah saya pelajari, bereksperimen dengan ide-ide baru, dan terhubung dengan orang lain yang memiliki passion yang sama. Saya harap Anda menikmati membacanya seperti saya menikmati menulisnya!",
             readArticle: "Baca artikel saya",
             currentFocus: "Fokus Saat Ini",
-            currentFocusDesc: "Saya fokus menciptakan pengalaman web yang imersif menggunakan teknologi 3D dan WebAssembly. Saat ini, saya bertindak sebagai mitra strategis untuk bisnis yang membutuhkan solusi khusus, dan saya juga terbuka untuk peluang Software Engineer full-time.",
+            currentFocusDesc: "Saya membangun solusi yang berarti: mengotomatisasi operasional bisnis kecil dengan sistem POS, menciptakan kehadiran digital yang memukau dengan web 3D, dan mengeksplorasi frontier teknologi blockchain. Saya terbuka untuk kerjasama dengan bisnis dan startup yang mencari bimbingan teknis strategis.",
             contactMe: "Hubungi saya",
         },
 
         // Services Section
         services: {
             title: "Layanan Saya",
-            subtitle: "Saya menawarkan berbagai layanan pengembangan untuk mewujudkan ide Anda",
-            webDev: {
-                title: "Pengembangan Web",
-                desc: "Membangun website dan aplikasi web modern yang responsif menggunakan teknologi terkini seperti React, Next.js, dan Laravel.",
+            subtitle: "Solusi Digital Lengkap untuk Bisnis Lokal dan Startup Teknologi",
+            service1: {
+                title: "Landing Page & Web 3D",
+                desc: "Halaman promosi visual yang memukau dengan elemen 3D interaktif untuk meningkatkan nilai brand.",
             },
-            mobileDev: {
-                title: "Pengembangan Mobile",
-                desc: "Membuat aplikasi mobile cross-platform dengan Flutter, memberikan pengalaman yang mulus di iOS dan Android.",
+            service2: {
+                title: "Sistem Kasir & Toko Online",
+                desc: "Solusi kasir terintegrasi, manajemen stok, dan toko online untuk mempercepat operasional dan memperluas jangkauan pasar secara online.",
             },
-            uiux: {
-                title: "Desain UI/UX",
-                desc: "Mendesain antarmuka pengguna yang intuitif dan indah yang memberikan pengalaman pengguna yang luar biasa dan meningkatkan engagement.",
+            service3: {
+                title: "Aplikasi Mobile",
+                desc: "Pembuatan aplikasi Android & iOS yang cepat dan responsif menggunakan teknologi React Native.",
             },
-            web3d: {
-                title: "Pengalaman Web 3D",
-                desc: "Mengembangkan pengalaman web 3D yang imersif menggunakan Three.js dan WebGL untuk menciptakan konten interaktif yang menarik.",
+            service4: {
+                title: "Integrasi AI & Chatbot",
+                desc: "Solusi AI percakapan yang cerdas terintegrasi dengan WhatsApp, Telegram, dan platform web, didukung LLM untuk engagement pelanggan 24/7.",
             },
-            api: {
-                title: "Pengembangan API",
-                desc: "Membangun RESTful API yang robust dan scalable dengan autentikasi, dokumentasi, dan best practices yang tepat.",
+            service5: {
+                title: "Blockchain & Smart Contract",
+                desc: "Pengembangan kontrak pintar (Smart Contract) yang aman untuk kebutuhan Web3 dan DApps.",
             },
-            performance: {
-                title: "Optimasi Performa",
-                desc: "Mengoptimalkan aplikasi web untuk kecepatan dan performa, termasuk integrasi WebAssembly dan code splitting.",
+            service6: {
+                title: "Custom Web App",
+                desc: "Sistem informasi berbasis web yang dirancang khusus sesuai alur kerja unik perusahaan Anda.",
             },
         },
 
@@ -161,11 +226,68 @@ export const translations = {
         projects: {
             title: "Karya Saya",
             checkLive: "Lihat situs live",
+            list: [
+                {
+                    title: 'Sistem Kasir untuk Toko Roti',
+                    desc: 'Sistem Point-of-Sale yang disesuaikan untuk toko roti, menyediakan fitur untuk manajemen inventori, pelacakan penjualan, dan optimasi operasional.',
+                    subdesc: 'Dikembangkan dengan Laravel 10 dan ReactJS menggunakan Inertia.js, sistem ini menyederhanakan tugas sehari-hari dan meningkatkan layanan pelanggan.',
+                },
+                {
+                    title: 'Olvad - E-Commerce untuk Toko Roti',
+                    desc: 'Olvad adalah platform e-commerce yang memungkinkan pengguna untuk menjelajahi dan membeli produk roti dengan mudah.',
+                    subdesc: 'Dibangun menggunakan NextJS dan Supabase, Olvad dirancang untuk mengoptimalkan penjualan roti online dan menyederhanakan perjalanan pelanggan.',
+                },
+                {
+                    title: 'Website Perbandingan WebAssembly dan JavaScript (sedang berjalan)',
+                    desc: 'Website ini dikembangkan sebagai bagian dari proyek penelitian yang membandingkan performa WebAssembly dan JavaScript dalam tugas pemrosesan gambar.',
+                    subdesc: 'Dibangun dengan Rust dan JavaScript, platform ini menyediakan tempat uji untuk mengevaluasi dan membandingkan efisiensi eksekusi kedua teknologi.',
+                },
+                {
+                    title: 'SmartPet - Aplikasi Perawatan Hewan (Pet Care App)',
+                    desc: 'SmartPet adalah solusi perawatan hewan yang diaktifkan IoT dengan integrasi smart collar untuk pelacakan aktivitas dan pemberian makan otomatis.',
+                    subdesc: 'Dibuat dengan Laravel 10 dan Arduino, SmartPet menawarkan ekosistem lengkap untuk memantau dan mengelola kesehatan hewan peliharaan.',
+                },
+                {
+                    title: 'LiniAksara - Platform Internasional untuk Karya Asli (sedang berjalan)',
+                    desc: 'LiniAksara adalah platform kolaboratif yang dikembangkan untuk proyek startup digital, dirancang untuk menampilkan dan mengelola karya asli yang dibuat pengguna.',
+                    subdesc: 'Didukung oleh NextJS dan Supabase, LiniAksara menyediakan antarmuka intuitif dan backend andal untuk manajemen konten dan kolaborasi.',
+                },
+            ],
         },
 
         // Experience Section
         experience: {
             title: "Pengalaman Saya",
+            experiences: [
+                {
+                    id: 4,
+                    name: 'PT Telkomsel',
+                    pos: 'Magang Software Engineer',
+                    duration: '2025',
+                    title: "Sebagai Magang Software Engineer, saya belajar dan meningkatkan keterampilan dalam pengembangan software menggunakan Laravel, Node.js, dan Unity, sekaligus mengembangkan soft skills seperti komunikasi dan teamwork.",
+                },
+                {
+                    id: 3,
+                    name: 'DISKOMINFO Kota Semarang',
+                    pos: 'Magang Web Developer',
+                    duration: '2025',
+                    title: "Sebagai Magang Web Developer, saya belajar dan meningkatkan keterampilan dalam pengembangan web menggunakan ReactJS dan Supabase, sekaligus mengembangkan soft skills seperti komunikasi dan teamwork.",
+                },
+                {
+                    id: 2,
+                    name: 'Universitas Dian Nuswantoro',
+                    pos: 'Asisten Laboratorium',
+                    duration: '2023 - 2024',
+                    title: "Sebagai Asisten Laboratorium, saya membantu mahasiswa di laboratorium untuk belajar dan mempraktikkan keterampilan mereka dalam mata kuliah seperti Programming Algorithm, Database, Web Programming dan lainnya.",
+                },
+                {
+                    id: 1,
+                    name: 'DNCC',
+                    pos: 'Mobile Division',
+                    duration: '2022 - 2024',
+                    title: "Sebagai bagian dari Mobile Division, saya belajar dan meningkatkan keterampilan dalam pengembangan mobile menggunakan Flutter, sekaligus mengembangkan soft skills seperti komunikasi dan teamwork.",
+                },
+            ],
         },
 
         // Reviews Section

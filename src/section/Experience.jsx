@@ -10,6 +10,8 @@ import { translations } from '../translations/translations';
 const Experience = () => {
     const { language } = useLanguage();
     const t = translations[language].experience;
+    const experiences = t.experiences || workExperiences;
+    
     return (
         <section className='c-space my-20 max-w-7xl mx-auto'>
             <div className="w-full text-gray-700 dark:text-white-600 transition-colors">
@@ -29,12 +31,14 @@ const Experience = () => {
                     <div className="work-content">
                         <div className="sm:py-10 py-5 sm:px-5 px-2.5">
                             {
-                                workExperiences.map(({ id, name, pos, duration, title, icon }) => {
+                                experiences.map(({ id, name, pos, duration, title, icon }) => {
+                                    // Find the icon from the original workExperiences if it's not in translations
+                                    const expIcon = icon || workExperiences.find(exp => exp.id === id)?.icon;
                                     return (
                                         <div key={id} className="work-content_container group" >
                                             <div className="flex flex-col h-full justify-start items-start py-2 !pt-6">
                                                 <div className="work-content_logo">
-                                                    <img src={icon} className="object-cover max-w-16 max-h-12" alt={`${ name } company logo`} />
+                                                    <img src={expIcon} className="object-cover max-w-16 max-h-12" alt={`${ name } company logo`} />
                                                 </div>
                                                 <div className="work-content_bar"></div>
                                             </div>

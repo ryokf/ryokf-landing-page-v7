@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber"
-import { Suspense } from "react";
+import { Suspense, useState, useEffect } from "react";
 import CanvasLoader from "../components/CanvasLoader";
 import { PerspectiveCamera } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
@@ -22,6 +22,22 @@ const Hero = () => {
     const isMobile = useMediaQuery({ maxWidth: 768 });
     const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
 
+    const [taglineIndex, setTaglineIndex] = useState(0);
+
+    useEffect(() => {
+        const taglines = Array.isArray(t.tagline) ? t.tagline : [t.tagline];
+        if (taglines.length <= 1) return;
+
+        const interval = setInterval(() => {
+            setTaglineIndex((prevIndex) => (prevIndex + 1) % taglines.length);
+        }, 4000); // Change tagline every 4 seconds
+
+        return () => clearInterval(interval);
+    }, [t.tagline]);
+
+    const taglines = Array.isArray(t.tagline) ? t.tagline : [t.tagline];
+    const currentTagline = taglines[taglineIndex];
+
     const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
     return (
@@ -33,7 +49,7 @@ const Hero = () => {
                     </span>
                     <span className="waving-hand"> 👋 </span>
                 </p>
-                <p className="hero_tag text-blue_gradient dark:text-violet_gradient text-7xl">{t.tagline}</p>
+                <p className="hero_tag text-blue_gradient dark:text-violet_gradient text-7xl">{currentTagline}</p>
             </div>
             <div className="w-full h-full absolute inset-0">
                 <Canvas className="w-full h-full">

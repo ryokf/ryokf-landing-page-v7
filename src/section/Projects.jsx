@@ -11,14 +11,18 @@ const Projects = () => {
     const { language } = useLanguage();
     const t = translations[language].projects;
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0)
-    const currentProject = myProjects[selectedProjectIndex]
+    
+    // Get project data from translations, fallback to myProjects for other data like logo, texture, etc.
+    const projects = t.list;
+    const currentProjectData = projects[selectedProjectIndex];
+    const currentProject = { ...myProjects[selectedProjectIndex], ...currentProjectData };
 
     const handleNavigation = (direction) => {
         setSelectedProjectIndex((prevIndex) => {
             if (direction === 'previous') {
-                return prevIndex === 0 ? myProjects.length - 1 : prevIndex - 1
+                return prevIndex === 0 ? projects.length - 1 : prevIndex - 1
             } else {
-                return prevIndex === myProjects.length - 1 ? 0 : prevIndex + 1
+                return prevIndex === projects.length - 1 ? 0 : prevIndex + 1
             }
         })
 
