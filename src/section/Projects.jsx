@@ -1,90 +1,182 @@
-import { Suspense, useState } from "react"
-import { myProjects } from "../constant"
-import { Canvas } from "@react-three/fiber"
-import { Center, OrbitControls } from '@react-three/drei';
-import CanvasLoader from "../components/CanvasLoader";
-import Laptop from "../components/Laptop";
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
+import { myProjects } from '../constant';
+
+// Browser frame mockup component — flat, front-facing, shows video clearly
+const BrowserFrame = ({ texture, href }) => {
+    // Extract a clean URL label from href
+    const urlLabel = href
+        ? href.replace(/^https?:\/\//, '').replace(/\/$/, '')
+        : 'app.preview';
+
+    return (
+        <div className="browser-frame">
+            {/* Browser chrome bar */}
+            <div className="browser-bar">
+                <span className="browser-dot bg-red-400"></span>
+                <span className="browser-dot bg-yellow-400"></span>
+                <span className="browser-dot bg-green-400"></span>
+                <span className="browser-url">{urlLabel}</span>
+            </div>
+            {/* App preview content */}
+            <div className="browser-content">
+                <video
+                    src={texture}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full object-cover"
+                    style={{ aspectRatio: '16/10', display: 'block' }}
+                />
+            </div>
+        </div>
+    );
+};
 
 const Projects = () => {
     const { language } = useLanguage();
     const t = translations[language].projects;
-    const [selectedProjectIndex, setSelectedProjectIndex] = useState(0)
-    
-    // Get project data from translations, fallback to myProjects for other data like logo, texture, etc.
-    const projects = t.list;
-    const currentProjectData = projects[selectedProjectIndex];
-    const currentProject = { ...myProjects[selectedProjectIndex], ...currentProjectData };
 
-    const handleNavigation = (direction) => {
-        setSelectedProjectIndex((prevIndex) => {
-            if (direction === 'previous') {
-                return prevIndex === 0 ? projects.length - 1 : prevIndex - 1
-            } else {
-                return prevIndex === projects.length - 1 ? 0 : prevIndex + 1
-            }
-        })
-
-    }
+    // Merge static asset data (texture, tags, logo, href) with translated text
+    const projects = t.list.map((translatedProject, index) => ({
+        ...myProjects[index],
+        ...translatedProject,
+    }));
 
     return (
-        <section className='c-space my-20 max-w-7xl m-auto'>
-            <p className='head-text'>{t.title}</p>
-            <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-                <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-gray-300/50 dark:shadow-black-200 rounded-lg bg-gray-50/50 dark:bg-black-200/50 transition-colors border border-gray-200 dark:border-black-300">
-                    <div className="absolute top-0 right-0">
-                        <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-xl" />
-                    </div>
-                    <div className="p-3 w-fit rounded-lg" style={currentProject.logoStyle}>
-                        <img src={currentProject.logo} alt={`${ currentProject.title } logo`} className="w-10 h-10 shadow-sm" />
-                    </div>
-                    <div className="flex flex-col gap-5 text-gray-700 dark:text-white-600 my-5 transition-colors">
-                        <p className="text-gray-900 dark:text-white text-2xl font-semibold animatedText">{currentProject.title}</p>
-                        <p className="animatedText text-gray-700 dark:text-white-600">{currentProject.desc}</p>
-                        <p className="text-gray-600 dark:text-white-600">{currentProject.subdesc}</p>
-                    </div>
-                    <div className="flex items-center justify-between flex-wrap gap-5">
-                        <div className="flex items-center gap-3">
-                            {
-                                currentProject.tags.map((tag) => (
-                                    <div key={tag.id} className="tech-logo text-gray-900 dark:text-white transition-colors">
-                                        <img src={tag.path} alt={tag.name} className="text-gray-900 dark:text-white" />
-                                    </div>
-                                ))
-                            }
+        <section className="c-space my-20 max-w-7xl m-auto" id="work">
+            <p className="head-text">{t.title}</p>
+
+            <div className="flex flex-col gap-16 mt-12">
+                {projects.map((project, index) => {
+                    const isEven = index % 2 === 0;
+
+                    const TextContent = (
+                        <div className="project-card">
+                            {/* Spotlight decorative background */}
+                            <div className="absolute top-0 right-0 pointer-events-none overflow-hidden rounded-2xl w-full h-full">
+                                <img
+                                    src={project.spotlight}
+                                    alt=""
+                                    className="w-full h-full object-cover opacity-40 dark:opacity-20"
+                                    aria-hidden="true"
+                                />
+                            </div>
+
+                            {/* Project logo + title */}
+                            <div className="relative flex items-center gap-3">
+                                <div
+                                    className="p-2.5 rounded-xl w-fit flex-shrink-0"
+                                    style={project.logoStyle}
+                                >
+                                    <img
+                                        src={project.logo}
+                                        alt={`${project.title} logo`}
+                                        className="w-8 h-8 object-contain"
+                                    />
+                                </div>
+                                <div>
+                                    <p className="text-gray-900 dark:text-white text-xl font-bold leading-tight">
+                                        {project.title}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* One-line description */}
+                            <p className="relative text-gray-600 dark:text-white-600 text-sm leading-relaxed">
+                                {project.desc}
+                            </p>
+
+                            {/* Feature bullet points */}
+                            {project.bullets && (
+                                <ul className="relative flex flex-col gap-2">
+                                    {project.bullets.map((bullet, bIndex) => (
+                                        <li key={bIndex} className="project-bullet">
+                                            <span className="text-lg leading-none flex-shrink-0 mt-0.5">
+                                                {bullet.icon}
+                                            </span>
+                                            <div className="flex flex-col">
+                                                <span className="text-gray-900 dark:text-white text-xs font-semibold">
+                                                    {bullet.label}
+                                                </span>
+                                                <span className="text-gray-500 dark:text-white-600 text-xs leading-relaxed">
+                                                    {bullet.text}
+                                                </span>
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+
+                            {/* Tech tags + CTA */}
+                            <div className="relative flex items-center justify-between flex-wrap gap-4 mt-auto pt-2 border-t border-gray-200/60 dark:border-black-300/60">
+                                <div className="flex items-center gap-2 flex-wrap">
+                                    {project.tags.map((tag) => (
+                                        <div
+                                            key={tag.id}
+                                            className="tech-logo"
+                                            title={tag.name}
+                                        >
+                                            <img
+                                                src={tag.path}
+                                                alt={tag.name}
+                                                className="w-5 h-5 object-contain"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                                <a
+                                    href={project.href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="live-btn"
+                                    id={`project-cta-${index}`}
+                                >
+                                    {t.checkLive}
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        className="w-3.5 h-3.5"
+                                    >
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                        <a href={currentProject.href} target="_blank" rel="noreferrer" className="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-white-600 hover:text-gray-900 dark:hover:text-white transition-colors">
-                            <p>{t.checkLive}</p>
-                            <img src="/assets/arrow-up.png" className="w-3 h-3" alt="external link icon" />
-                        </a>
-                    </div>
-                    <div className="flex justify-between items-center mt-7">
-                        <button className="arrow-btn" onClick={() => handleNavigation('previous')} aria-label="Previous project">
-                            <img src="/assets/left-arrow.png" alt="left arrow" className="w-4 h-4 invert dark:invert-0" />
-                        </button>
-                        <button className="arrow-btn" onClick={() => handleNavigation('next')} aria-label="Next project">
-                            <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4 invert dark:invert-0" />
-                        </button>
-                    </div>
-                </div>
-                <div className="border border-gray-200 dark:border-black-300 bg-gray-50/50 dark:bg-black-200 rounded-lg h-96 md:h-full transition-colors">
-                    <Canvas camera={{ position: [0, 1, 7], fov: 50 }}>
-                        <ambientLight intensity={1} />
-                        <directionalLight position={[8, 8, 4]} intensity={2} />
-                        <Center>
-                            <Suspense fallback={<CanvasLoader />}>
-                                <group position={[0, -2.5, -0.5]} rotation={[0, -0.2, 0]} scale={1.5}>
-                                    <Laptop texture={currentProject.texture}></Laptop>
-                                </group>
-                            </Suspense>
-                        </Center>
-                        <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
-                    </Canvas>
-                </div>
+                    );
+
+                    const MockupContent = (
+                        <BrowserFrame
+                            texture={project.texture}
+                            href={project.href}
+                        />
+                    );
+
+                    return (
+                        <div key={index} className="project-row">
+                            {isEven ? (
+                                <>
+                                    {TextContent}
+                                    {MockupContent}
+                                </>
+                            ) : (
+                                <>
+                                    <div className="order-2 lg:order-1">{MockupContent}</div>
+                                    <div className="order-1 lg:order-2">{TextContent}</div>
+                                </>
+                            )}
+                        </div>
+                    );
+                })}
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Projects
+export default Projects;

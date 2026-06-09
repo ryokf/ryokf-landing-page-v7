@@ -36,14 +36,18 @@ export const navLinks = [
 export const myProjects = [
     {
         title: 'POS System for Bakery Shop',
-        desc: 'A Point-of-Sale system tailored for bakery shops, providing features for inventory management, sales tracking, and operations optimization.',
+        desc: 'A high-performance Point-of-Sale system tailored for inventory and sales tracking.',
         subdesc: 'Developed with Laravel 10 and ReactJS using Inertia.js, the system streamlines daily tasks and enhances customer service.',
+        bullets: [
+            { icon: '📦', label: 'Smart Inventory', text: 'Real-time stock alerts & management' },
+            { icon: '📊', label: 'Sales Analytics', text: 'Automated daily operational tracking' },
+            { icon: '⚡', label: 'Modern Stack', text: 'Laravel & React via Inertia.js for seamless SPA experience' },
+        ],
         href: 'https://github.com/ryokf/pos-app',
         texture: '/textures/project/pos-bakery.mp4',
         logo: '/assets/project_logo/olvad.png',
         logoStyle: {
             backgroundColor: '#14b8a6',
-            // border: '0.2px solid #238F60',
             boxShadow: '0px 0px 60px -10px #238F604D',
         },
         spotlight: '/assets/spotlight3.png',
@@ -72,14 +76,18 @@ export const myProjects = [
     },
     {
         title: 'Olvad - E-Commerce for Bakery Shop',
-        desc: 'Olvad is an e-commerce platform that allows users to browse and purchase bakery products with ease.',
+        desc: 'A modern e-commerce platform allowing users to browse and purchase bakery products with ease.',
         subdesc: 'Built using NextJS and Supabase, Olvad is designed to optimize online bakery sales and simplify the customer journey.',
+        bullets: [
+            { icon: '🛒', label: 'Online Store', text: 'Full product catalog with cart & checkout flow' },
+            { icon: '🔒', label: 'Auth & Orders', text: 'Secure user authentication & order management' },
+            { icon: '🚀', label: 'JAMstack', text: 'Next.js SSR + Supabase for real-time data' },
+        ],
         href: 'https://olvad.vercel.app/',
         texture: '/textures/project/olvad.mp4',
         logo: '/assets/project_logo/olvad.png',
         logoStyle: {
             backgroundColor: '#14b8a6',
-            // border: '0.2px solid #238F60',
             boxShadow: '0px 0px 60px -10px #238F604D',
         },
         spotlight: '/assets/spotlight3.png',
@@ -102,15 +110,19 @@ export const myProjects = [
         ],
     },
     {
-        title: 'WebAssmebly and js Comparison Website (ongoing)',
-        desc: 'This website was developed as part of a research project comparing the performance of WebAssembly and JavaScript in image processing tasks.',
+        title: 'WebAssembly vs JS Comparison (ongoing)',
+        desc: 'A research platform benchmarking WebAssembly against JavaScript for image processing performance.',
         subdesc: 'Built with Rust and JavaScript, the platform provides a testbed to evaluate and contrast the execution efficiency of both technologies.',
+        bullets: [
+            { icon: '🔬', label: 'Benchmarking', text: 'Side-by-side performance metrics for WASM vs JS' },
+            { icon: '🦀', label: 'Rust + WASM', text: 'Compiled Rust to WebAssembly for near-native speed' },
+            { icon: '📈', label: 'Research', text: 'Academic research project on execution efficiency' },
+        ],
         href: 'https://github.com/ryokf/wasm-image-processing-comparison',
         texture: '/textures/project/wasm-compare.mp4',
         logo: '/assets/wasm.png',
         logoStyle: {
             backgroundColor: 'oklch(67.3% 0.182 276.935)',
-            // border: '0.2px solid #000033',
             boxShadow: '0px 0px 60px -10px #000033',
         },
         spotlight: '/assets/spotlight1.png',
@@ -139,14 +151,18 @@ export const myProjects = [
     },
     {
         title: 'SmartPet - Pet Care App',
-        desc: 'SmartPet is an IoT-enabled pet care solution featuring smart collar integration for activity tracking and automated feeding.',
+        desc: 'An IoT-enabled pet care solution featuring smart collar integration for activity tracking and automated feeding.',
         subdesc: 'Created with Laravel 10 and Arduino, SmartPet offers a complete ecosystem for monitoring and managing pet health.',
+        bullets: [
+            { icon: '📡', label: 'IoT Integration', text: 'Smart collar syncs real-time activity data' },
+            { icon: '🍽️', label: 'Auto Feeding', text: 'Arduino-controlled automated feeding schedule' },
+            { icon: '❤️', label: 'Health Monitor', text: 'Complete pet health dashboard & alerts' },
+        ],
         href: 'https://github.com/Agnestia/SmartPetLaravel',
         texture: '/textures/project/smart-pet.mp4',
         logo: '/assets/project_logo/smart-pet.png',
         logoStyle: {
             backgroundColor: '#f59e0b',
-            // border: '0.2px solid #0E2D58',
             boxShadow: '0px 0px 60px -10px #2F67B64D',
         },
         spotlight: '/assets/spotlight4.png',
@@ -169,15 +185,19 @@ export const myProjects = [
         ],
     },
     {
-        title: 'LiniAksara - An International Platform For Original Works (ongoing)',
-        desc: 'LiniAksara is a collaborative platform developed for a digital startup project, designed to showcase and manage original user-created works.',
+        title: 'LiniAksara - International Platform for Original Works',
+        desc: 'A collaborative platform for a digital startup, designed to showcase and manage original user-created works internationally.',
         subdesc: 'Powered by NextJS and Supabase, LiniAksara delivers an intuitive interface and reliable backend for content management and collaboration.',
+        bullets: [
+            { icon: '🌍', label: 'Global Reach', text: 'Multi-language content platform for international creators' },
+            { icon: '✍️', label: 'Content Hub', text: 'Upload, manage & publish original works with ease' },
+            { icon: '🔗', label: 'Collaboration', text: 'Next.js + Supabase powering real-time collaboration' },
+        ],
         href: 'https://liniaksara.vercel.app/',
         texture: '/textures/project/inkura.mp4',
         logo: '/assets/project_logo/inkura.webp',
         logoStyle: {
             backgroundColor: 'oklch(45.2% 0.211 324.591)',
-            // border: '0.2px solid #000033',
             boxShadow: '0px 0px 60px -10px #000033',
         },
         spotlight: '/assets/spotlight1.png',

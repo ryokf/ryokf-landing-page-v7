@@ -72,28 +72,53 @@ export const translations = {
             list: [
                 {
                     title: 'POS System for Bakery Shop',
-                    desc: 'A Point-of-Sale system tailored for bakery shops, providing features for inventory management, sales tracking, and operations optimization.',
+                    desc: 'A high-performance Point-of-Sale system tailored for inventory and sales tracking.',
                     subdesc: 'Developed with Laravel 10 and ReactJS using Inertia.js, the system streamlines daily tasks and enhances customer service.',
+                    bullets: [
+                        { icon: '📦', label: 'Smart Inventory', text: 'Real-time stock alerts & management' },
+                        { icon: '📊', label: 'Sales Analytics', text: 'Automated daily operational tracking' },
+                        { icon: '⚡', label: 'Modern Stack', text: 'Laravel & React via Inertia.js for seamless SPA experience' },
+                    ],
                 },
                 {
                     title: 'Olvad - E-Commerce for Bakery Shop',
-                    desc: 'Olvad is an e-commerce platform that allows users to browse and purchase bakery products with ease.',
+                    desc: 'A modern e-commerce platform allowing users to browse and purchase bakery products with ease.',
                     subdesc: 'Built using NextJS and Supabase, Olvad is designed to optimize online bakery sales and simplify the customer journey.',
+                    bullets: [
+                        { icon: '🛒', label: 'Online Store', text: 'Full product catalog with cart & checkout flow' },
+                        { icon: '🔒', label: 'Auth & Orders', text: 'Secure user authentication & order management' },
+                        { icon: '🚀', label: 'JAMstack', text: 'Next.js SSR + Supabase for real-time data' },
+                    ],
                 },
                 {
-                    title: 'WebAssmebly and js Comparison Website (ongoing)',
-                    desc: 'This website was developed as part of a research project comparing the performance of WebAssembly and JavaScript in image processing tasks.',
+                    title: 'WebAssembly vs JS Comparison (ongoing)',
+                    desc: 'A research platform benchmarking WebAssembly against JavaScript for image processing performance.',
                     subdesc: 'Built with Rust and JavaScript, the platform provides a testbed to evaluate and contrast the execution efficiency of both technologies.',
+                    bullets: [
+                        { icon: '🔬', label: 'Benchmarking', text: 'Side-by-side performance metrics for WASM vs JS' },
+                        { icon: '🦀', label: 'Rust + WASM', text: 'Compiled Rust to WebAssembly for near-native speed' },
+                        { icon: '📈', label: 'Research', text: 'Academic research project on execution efficiency' },
+                    ],
                 },
                 {
                     title: 'SmartPet - Pet Care App',
-                    desc: 'SmartPet is an IoT-enabled pet care solution featuring smart collar integration for activity tracking and automated feeding.',
+                    desc: 'An IoT-enabled pet care solution featuring smart collar integration for activity tracking and automated feeding.',
                     subdesc: 'Created with Laravel 10 and Arduino, SmartPet offers a complete ecosystem for monitoring and managing pet health.',
+                    bullets: [
+                        { icon: '📡', label: 'IoT Integration', text: 'Smart collar syncs real-time activity data' },
+                        { icon: '🍽️', label: 'Auto Feeding', text: 'Arduino-controlled automated feeding schedule' },
+                        { icon: '❤️', label: 'Health Monitor', text: 'Complete pet health dashboard & alerts' },
+                    ],
                 },
                 {
-                    title: 'LiniAksara - An International Platform For Original Works (ongoing)',
-                    desc: 'LiniAksara is a collaborative platform developed for a digital startup project, designed to showcase and manage original user-created works.',
+                    title: 'LiniAksara - International Platform for Original Works',
+                    desc: 'A collaborative platform for a digital startup, designed to showcase and manage original user-created works internationally.',
                     subdesc: 'Powered by NextJS and Supabase, LiniAksara delivers an intuitive interface and reliable backend for content management and collaboration.',
+                    bullets: [
+                        { icon: '🌍', label: 'Global Reach', text: 'Multi-language content platform for international creators' },
+                        { icon: '✍️', label: 'Content Hub', text: 'Upload, manage & publish original works with ease' },
+                        { icon: '🔗', label: 'Collaboration', text: 'Next.js + Supabase powering real-time collaboration' },
+                    ],
                 },
             ],
         },
@@ -229,28 +254,53 @@ export const translations = {
             list: [
                 {
                     title: 'Sistem Kasir untuk Toko Roti',
-                    desc: 'Sistem Point-of-Sale yang disesuaikan untuk toko roti, menyediakan fitur untuk manajemen inventori, pelacakan penjualan, dan optimasi operasional.',
+                    desc: 'Sistem Point-of-Sale berkinerja tinggi yang disesuaikan untuk manajemen inventori dan pelacakan penjualan.',
                     subdesc: 'Dikembangkan dengan Laravel 10 dan ReactJS menggunakan Inertia.js, sistem ini menyederhanakan tugas sehari-hari dan meningkatkan layanan pelanggan.',
+                    bullets: [
+                        { icon: '📦', label: 'Inventori Cerdas', text: 'Peringatan & manajemen stok secara real-time' },
+                        { icon: '📊', label: 'Analitik Penjualan', text: 'Pelacakan operasional harian otomatis' },
+                        { icon: '⚡', label: 'Stack Modern', text: 'Laravel & React via Inertia.js untuk pengalaman SPA yang mulus' },
+                    ],
                 },
                 {
                     title: 'Olvad - E-Commerce untuk Toko Roti',
-                    desc: 'Olvad adalah platform e-commerce yang memungkinkan pengguna untuk menjelajahi dan membeli produk roti dengan mudah.',
+                    desc: 'Platform e-commerce modern yang memungkinkan pengguna menjelajahi dan membeli produk roti dengan mudah.',
                     subdesc: 'Dibangun menggunakan NextJS dan Supabase, Olvad dirancang untuk mengoptimalkan penjualan roti online dan menyederhanakan perjalanan pelanggan.',
+                    bullets: [
+                        { icon: '🛒', label: 'Toko Online', text: 'Katalog produk lengkap dengan alur keranjang & checkout' },
+                        { icon: '🔒', label: 'Auth & Pesanan', text: 'Autentikasi pengguna & manajemen pesanan yang aman' },
+                        { icon: '🚀', label: 'JAMstack', text: 'Next.js SSR + Supabase untuk data real-time' },
+                    ],
                 },
                 {
-                    title: 'Website Perbandingan WebAssembly dan JavaScript (sedang berjalan)',
-                    desc: 'Website ini dikembangkan sebagai bagian dari proyek penelitian yang membandingkan performa WebAssembly dan JavaScript dalam tugas pemrosesan gambar.',
+                    title: 'Perbandingan WebAssembly vs JavaScript (sedang berjalan)',
+                    desc: 'Platform riset untuk membandingkan WebAssembly dengan JavaScript dalam pemrosesan gambar secara mendalam.',
                     subdesc: 'Dibangun dengan Rust dan JavaScript, platform ini menyediakan tempat uji untuk mengevaluasi dan membandingkan efisiensi eksekusi kedua teknologi.',
+                    bullets: [
+                        { icon: '🔬', label: 'Benchmarking', text: 'Metrik performa berdampingan untuk WASM vs JS' },
+                        { icon: '🦀', label: 'Rust + WASM', text: 'Rust dikompilasi ke WebAssembly untuk kecepatan mendekati native' },
+                        { icon: '📈', label: 'Riset', text: 'Proyek riset akademis tentang efisiensi eksekusi' },
+                    ],
                 },
                 {
-                    title: 'SmartPet - Aplikasi Perawatan Hewan (Pet Care App)',
-                    desc: 'SmartPet adalah solusi perawatan hewan yang diaktifkan IoT dengan integrasi smart collar untuk pelacakan aktivitas dan pemberian makan otomatis.',
+                    title: 'SmartPet - Aplikasi Perawatan Hewan',
+                    desc: 'Solusi perawatan hewan berbasis IoT dengan integrasi smart collar untuk pelacakan aktivitas dan pemberian makan otomatis.',
                     subdesc: 'Dibuat dengan Laravel 10 dan Arduino, SmartPet menawarkan ekosistem lengkap untuk memantau dan mengelola kesehatan hewan peliharaan.',
+                    bullets: [
+                        { icon: '📡', label: 'Integrasi IoT', text: 'Smart collar menyinkronkan data aktivitas secara real-time' },
+                        { icon: '🍽️', label: 'Makan Otomatis', text: 'Jadwal pemberian makan otomatis dikontrol Arduino' },
+                        { icon: '❤️', label: 'Monitor Kesehatan', text: 'Dashboard & peringatan kesehatan hewan lengkap' },
+                    ],
                 },
                 {
-                    title: 'LiniAksara - Platform Internasional untuk Karya Asli (sedang berjalan)',
-                    desc: 'LiniAksara adalah platform kolaboratif yang dikembangkan untuk proyek startup digital, dirancang untuk menampilkan dan mengelola karya asli yang dibuat pengguna.',
+                    title: 'LiniAksara - Platform Internasional untuk Karya Asli',
+                    desc: 'Platform kolaboratif untuk startup digital, dirancang untuk menampilkan dan mengelola karya asli kreator secara internasional.',
                     subdesc: 'Didukung oleh NextJS dan Supabase, LiniAksara menyediakan antarmuka intuitif dan backend andal untuk manajemen konten dan kolaborasi.',
+                    bullets: [
+                        { icon: '🌍', label: 'Jangkauan Global', text: 'Platform konten multibahasa untuk kreator internasional' },
+                        { icon: '✍️', label: 'Hub Konten', text: 'Unggah, kelola & publikasikan karya asli dengan mudah' },
+                        { icon: '🔗', label: 'Kolaborasi', text: 'Next.js + Supabase mendukung kolaborasi real-time' },
+                    ],
                 },
             ],
         },
