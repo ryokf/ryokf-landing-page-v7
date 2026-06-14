@@ -179,6 +179,26 @@ body {
     @apply bg-gray-900 dark:bg-black-100 overflow-hidden;
   }
 
+  /* phone frame mockup */
+  .phone-frame {
+    @apply rounded-[36px] overflow-hidden border-[6px] border-gray-900 dark:border-black-300 transition-all duration-300 shadow-lg relative mx-auto bg-gray-950;
+    max-width: 250px;
+    aspect-ratio: 9/19;
+  }
+
+  .phone-frame:hover {
+    @apply shadow-2xl;
+    transform: scale(1.02);
+  }
+
+  .phone-notch {
+    @apply absolute top-2 left-1/2 -translate-x-1/2 w-20 h-3.5 rounded-full bg-gray-900 dark:bg-black-300 z-10;
+  }
+
+  .phone-content {
+    @apply w-full h-full overflow-hidden;
+  }
+
   /* clients section */
   .client-container {
     @apply grid md:grid-cols-2 grid-cols-1 gap-5 mt-12;

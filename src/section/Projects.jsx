@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations/translations';
 import { myProjects } from '../constant';
@@ -32,6 +33,37 @@ const BrowserFrame = ({ texture, href }) => {
             </div>
         </div>
     );
+};
+
+BrowserFrame.propTypes = {
+    texture: PropTypes.string.isRequired,
+    href: PropTypes.string,
+};
+
+// Phone frame mockup component — flat, portrait orientation
+const PhoneFrame = ({ texture }) => {
+    return (
+        <div className="phone-frame">
+            {/* Notch */}
+            <div className="phone-notch"></div>
+            {/* App preview content */}
+            <div className="phone-content">
+                <video
+                    src={texture}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover"
+                    style={{ display: 'block' }}
+                />
+            </div>
+        </div>
+    );
+};
+
+PhoneFrame.propTypes = {
+    texture: PropTypes.string.isRequired,
 };
 
 const Projects = () => {
@@ -133,7 +165,7 @@ const Projects = () => {
                                     className="live-btn"
                                     id={`project-cta-${index}`}
                                 >
-                                    {t.checkLive}
+                                    {project.type === 'mobile' ? t.downloadApp : t.checkLive}
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 20 20"
@@ -151,7 +183,11 @@ const Projects = () => {
                         </div>
                     );
 
-                    const MockupContent = (
+                    const MockupContent = project.type === 'mobile' ? (
+                        <PhoneFrame
+                            texture={project.texture}
+                        />
+                    ) : (
                         <BrowserFrame
                             texture={project.texture}
                             href={project.href}
